@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="TRPO_KPPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>trpo_kp.Warrant</class>
+    <class>trpo_kp.Department</class>
+    <class>trpo_kp.Bill</class>
+    <class>trpo_kp.Agency</class>
+    <class>trpo_kp.Product</class>
+    <class>trpo_kp.Paymentorder</class>
+    <class>trpo_kp.Employee</class>
+    <class>trpo_kp.Warrantrow</class>
+    <class>trpo_kp.tables.Department</class>
+    <class>trpo_kp.tables.Agency</class>
+    <class>trpo_kp.tables.Warrant</class>
+    <class>trpo_kp.tables.Warrantrow</class>
+    <class>trpo_kp.tables.Employee</class>
+    <class>trpo_kp.tables.Paymentorder</class>
+    <class>trpo_kp.tables.Bill</class>
+    <class>trpo_kp.tables.Product</class>
+    <class>trpo_kp.tables.Billrow</class>
+    <class>trpo_kp.tables.Billrownumber</class>
+    <class>trpo_kp.tables.Warrow</class>
+    <class>trpo_kp.tables.Warrownumber</class>
+    <class>trpo_kp.tables.Docrow</class>
+    <properties>
+      <property name="eclipselink.logging.file" value="output.log"/>
+      <property name="eclipselink.logging.level" value="ALL"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="javax.persistence.jdbc.password" value="123qweQWE"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="system"/>
+    </properties>
+  </persistence-unit>
+</persistence>
