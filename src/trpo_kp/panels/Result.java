@@ -443,8 +443,8 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     for (Docrow docrow : docrowList) {
         Warrownumber wrnmbr = new Warrownumber();
         wrnmbr.setRowId(docrow);
-        wrnmbr.setRownumber(new BigInteger("" + n));
-        n++;
+        wrnmbr.setRownumber(new BigInteger("" + n++));
+        //n++;
         docrow.setWarrownumber(wrnmbr);
         docrow.setWarId(warrant);
         docrow.setStatus(BigInteger.TEN);
