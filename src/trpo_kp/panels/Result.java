@@ -10,8 +10,17 @@
  */
 package trpo_kp.panels;
 
+import java.math.BigInteger;
+import java.util.Date;
+import java.util.List;
 import java.util.Vector;
+import javax.persistence.EntityManager;
+import javax.swing.JDialog;
 import javax.swing.table.DefaultTableModel;
+import trpo_kp.control.OrganisationControl;
+import trpo_kp.tables.Docrow;
+import trpo_kp.tables.Warrant;
+import trpo_kp.tables.Warrownumber;
 
 /**
  *
@@ -32,8 +41,17 @@ public class Result extends javax.swing.JPanel {
         INN.setText(info.getOrg().getInn());
         KPP.setText(info.getOrg().getKpp());
         adress.setText(info.getOrg().getAdress());
-        issueDate.setText("Не знаю");
-        validUntil.setText("Не знаю");
+        this.setCurrDate(java.util.Calendar.getInstance().getTime());
+        issueDate.setText(currDate.getDate() + "/" + 
+                currDate.getMonth() + "/" +
+                (currDate.getYear()+1900));
+        Date dvalidUntil = (Date)currDate.clone();
+        dvalidUntil.setDate(dvalidUntil.getDate() + 10);
+        
+        validUntil.setText(dvalidUntil.getDate() + "/" + 
+                dvalidUntil.getMonth() + "/" +
+                (dvalidUntil.getYear()+1900));
+        
         po.setText("№: " + info.getPaymentorder().getId() + 
                 ", Дата:" + info.getPaymentorder().getPodate().getDate() + "/" + 
                 info.getPaymentorder().getPodate().getMonth() + "/" +
@@ -58,6 +76,8 @@ public class Result extends javax.swing.JPanel {
                 (info.getEmployee().getIssueDate().getYear()+1900)+
                 ", кем выдан:" + info.getEmployee().getIssuedBy());
         sup.setText(info.getPaymentorder().getSupId().getName());
+        chief.setText(info.getOrg().getDirector());
+        accauntant.setText(info.getOrg().getChiefAccountant());
     }
 
     /** This method is called from within the constructor to
@@ -99,7 +119,9 @@ public class Result extends javax.swing.JPanel {
         passport = new javax.swing.JTextField();
         sup = new javax.swing.JTextField();
         chief = new javax.swing.JTextField();
-        buhgalter = new javax.swing.JTextField();
+        accauntant = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setName("Form"); // NOI18N
 
@@ -241,9 +263,25 @@ public class Result extends javax.swing.JPanel {
         chief.setText(resourceMap.getString("chief.text")); // NOI18N
         chief.setName("chief"); // NOI18N
 
-        buhgalter.setEditable(false);
-        buhgalter.setText(resourceMap.getString("buhgalter.text")); // NOI18N
-        buhgalter.setName("buhgalter"); // NOI18N
+        accauntant.setEditable(false);
+        accauntant.setText(resourceMap.getString("accauntant.text")); // NOI18N
+        accauntant.setName("accauntant"); // NOI18N
+
+        jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
+        jButton1.setName("jButton1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
+        jButton2.setName("jButton2"); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -310,11 +348,17 @@ public class Result extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel14)
                                 .addGap(18, 18, 18)
-                                .addComponent(buhgalter, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE))))
+                                .addComponent(accauntant, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(342, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(82, 82, 82)
+                .addComponent(jButton2)
+                .addGap(71, 71, 71))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,18 +420,56 @@ public class Result extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(buhgalter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(accauntant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    root.dispose();
+}//GEN-LAST:event_jButton2ActionPerformed
+
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    Warrant warrant = new Warrant();
+    warrant.setEmplId(info.getEmployee());
+    warrant.setOrderId(info.getPaymentorder());
+    warrant.setIssueDate(currDate);
+    warrant.setDocrowList(info.getPaymentorder().getDocrowList());
+    List<Docrow> docrowList = warrant.getDocrowList();
+    int n = 0;
+    for (Docrow docrow : docrowList) {
+        Warrownumber wrnmbr = new Warrownumber();
+        wrnmbr.setRowId(docrow);
+        wrnmbr.setRownumber(new BigInteger("" + n));
+        n++;
+        docrow.setWarrownumber(wrnmbr);
+        docrow.setWarId(warrant);
+        docrow.setStatus(BigInteger.TEN);
+    }
+    EntityManager entityManager = OrganisationControl.getEntityManager();
+    entityManager.getTransaction().begin();
+    entityManager.persist(warrant);
+    for (Docrow docrow : docrowList) {
+        entityManager.merge(docrow);
+    }
+    entityManager.getTransaction().commit();
+    entityManager.close();
+    root.dispose();
+}//GEN-LAST:event_jButton1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField INN;
     private javax.swing.JTextField KPP;
+    private javax.swing.JTextField accauntant;
     private javax.swing.JTextField adress;
-    private javax.swing.JTextField buhgalter;
     private javax.swing.JTextField chief;
     private javax.swing.JTextField empl;
     private javax.swing.JTextField issueDate;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -431,6 +513,44 @@ public class Result extends javax.swing.JPanel {
      */
     public void setInfo(resultInfo info) {
         this.info = info;
+    }
+    private JDialog root;
+
+    /**
+     * Get the value of root
+     *
+     * @return the value of root
+     */
+    public JDialog getRoot() {
+        return root;
+    }
+
+    /**
+     * Set the value of root
+     *
+     * @param root new value of root
+     */
+    public void setRoot(JDialog root) {
+        this.root = root;
+    }
+    private Date currDate;
+
+    /**
+     * Get the value of currDate
+     *
+     * @return the value of currDate
+     */
+    public Date getCurrDate() {
+        return currDate;
+    }
+
+    /**
+     * Set the value of currDate
+     *
+     * @param currDate new value of currDate
+     */
+    public void setCurrDate(Date currDate) {
+        this.currDate = currDate;
     }
 
 }

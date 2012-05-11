@@ -26,7 +26,6 @@ import trpo_kp.tables.Paymentorder;
  */
 public class OrganisationControl {
 
-    //comment проверка commit-а
     private static String orgName = "Моя уютная контора";
     private static Agency org = null;
     private static EntityManagerFactory emf = null;

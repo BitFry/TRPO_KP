@@ -15,6 +15,7 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import trpo_kp.control.OrganisationControl;
@@ -198,6 +199,11 @@ public class WarrantRegister extends javax.swing.JPanel {
 
         jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
         jButton2.setName("jButton2"); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -336,6 +342,10 @@ private void employeeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
     setEmployee(getDepartment().findEmployee(text));
     //System.out.println(((JComboBox) evt.getSource()).getSelectedItem().toString());
 }//GEN-LAST:event_employeeListActionPerformed
+
+private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    root.dispose();
+}//GEN-LAST:event_jButton2ActionPerformed
 private void fillProductTable(List<Docrow> docrowList, TableModel tm){
     DefaultTableModel dtm = (DefaultTableModel) tm;
     while (dtm.getRowCount() > 0) {
@@ -443,4 +453,24 @@ private void fillProductTable(List<Docrow> docrowList, TableModel tm){
     private Paymentorder paymentorder = null;
     private Employee employee = null;
     private Department department = null;
+    private JDialog root;
+
+    /**
+     * Get the value of root
+     *
+     * @return the value of root
+     */
+    public JDialog getRoot() {
+        return root;
+    }
+
+    /**
+     * Set the value of root
+     *
+     * @param root new value of root
+     */
+    public void setRoot(JDialog root) {
+        this.root = root;
+    }
+
 }

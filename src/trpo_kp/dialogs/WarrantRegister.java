@@ -20,6 +20,7 @@ public class WarrantRegister extends javax.swing.JDialog {
     public WarrantRegister(java.awt.Frame parent, boolean modal) {
         super(parent,"Регистрация доверенности", modal);
         initComponents();
+        warrantRegister1.setRoot(this);
     }
 
     /** This method is called from within the constructor to
