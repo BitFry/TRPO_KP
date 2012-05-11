@@ -171,14 +171,14 @@ public class Result extends javax.swing.JPanel {
 
             },
             new String [] {
-                "№", "Название", "Ед.Изм.", "Цена", "НДС", "Акциз", "Кол-во", "Стоимость", "НДС", "Акциз", "с налогами"
+                "№", "Название", "Ед.Изм.", "Цена", "НДС", "Акциз", "Кол-во", "Стоимость", "НДС", "Акциз", "с налогами", "Статус"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -203,6 +203,7 @@ public class Result extends javax.swing.JPanel {
         products.getColumnModel().getColumn(8).setHeaderValue(resourceMap.getString("products.columnModel.title8")); // NOI18N
         products.getColumnModel().getColumn(9).setHeaderValue(resourceMap.getString("products.columnModel.title9")); // NOI18N
         products.getColumnModel().getColumn(10).setHeaderValue(resourceMap.getString("products.columnModel.title10")); // NOI18N
+        products.getColumnModel().getColumn(11).setHeaderValue(resourceMap.getString("products.columnModel.title11")); // NOI18N
 
         jScrollPane2.setViewportView(jScrollPane1);
 
@@ -444,7 +445,6 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         Warrownumber wrnmbr = new Warrownumber();
         wrnmbr.setRowId(docrow);
         wrnmbr.setRownumber(new BigInteger("" + n++));
-        //n++;
         docrow.setWarrownumber(wrnmbr);
         docrow.setWarId(warrant);
         docrow.setStatus(BigInteger.TEN);

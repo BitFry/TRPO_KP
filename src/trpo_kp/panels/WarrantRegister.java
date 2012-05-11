@@ -150,14 +150,14 @@ public class WarrantRegister extends javax.swing.JPanel {
 
             },
             new String [] {
-                "№", "Название", "Ед.изм.", "Цена", "НДС", "Акциз", "Кол-во", "Стоимость", "НДС", "Акциз", "с налогами"
+                "№", "Название", "Ед.изм.", "Цена", "НДС", "Акциз", "Кол-во", "Стоимость", "НДС", "Акциз", "с налогами", "Статус"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -182,6 +182,7 @@ public class WarrantRegister extends javax.swing.JPanel {
         jTable1.getColumnModel().getColumn(8).setHeaderValue(resourceMap.getString("jTable1.columnModel.title8")); // NOI18N
         jTable1.getColumnModel().getColumn(9).setHeaderValue(resourceMap.getString("jTable1.columnModel.title9")); // NOI18N
         jTable1.getColumnModel().getColumn(10).setHeaderValue(resourceMap.getString("jTable1.columnModel.title10")); // NOI18N
+        jTable1.getColumnModel().getColumn(11).setHeaderValue(resourceMap.getString("jTable1.columnModel.title11")); // NOI18N
 
         jScrollPane2.setViewportView(jScrollPane1);
 
@@ -374,6 +375,17 @@ private void fillProductTable(List<Docrow> docrowList, TableModel tm){
         rowVec.add(tmp*nds);
         rowVec.add(tmp*excise);
         rowVec.add(tmp + tmp*nds + tmp*excise);
+        switch(docrow.getStatus().intValue()){
+            case 0:
+                rowVec.add("Не оплачено");
+                break;
+            case 1:
+                rowVec.add("Оплачено");
+                break;
+            case 10:
+                rowVec.add("Получено");
+                break;
+        }
         dtm.addRow(rowVec);
         totalCount += count;
         pPrice += tmp;
