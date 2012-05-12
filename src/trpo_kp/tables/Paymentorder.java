@@ -41,7 +41,10 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id"),
     @NamedQuery(name = "Paymentorder.findByPodate", query = "SELECT p FROM Paymentorder p WHERE p.podate = :podate"),
     @NamedQuery(name = "Paymentorder.findByAmount", query = "SELECT p FROM Paymentorder p WHERE p.amount = :amount"),
-    @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id")})
+    @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id"),
+    @NamedQuery(name = "Paymentorder.findFreeByOrgId", 
+        query = "SELECT p FROM Paymentorder p WHERE "
+                    + "p.id not in (SELECT w.orderId.id from Warrant w)")})
 @SequenceGenerator(name="PaymentorderSeq", sequenceName="PAYMENTORDER_SEQ", initialValue=1000, allocationSize=1)
 public class Paymentorder implements Serializable {
     @Basic(optional = false)
@@ -58,18 +61,15 @@ public class Paymentorder implements Serializable {
     @Basic(optional = false)
     @Column(name = "AMOUNT")
     private double amount;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "orderId", fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "orderId", fetch = FetchType.EAGER)
     private Warrant warrant;
     @OneToMany(mappedBy = "poId", fetch = FetchType.LAZY)
     private List<Docrow> docrowList;
     @JoinColumn(name = "BILL_ID", referencedColumnName = "ID")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Bill billId;
-    @JoinColumn(name = "SUP_ID", referencedColumnName = "ID")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Agency supId;
     @JoinColumn(name = "ORG_ID", referencedColumnName = "ID")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Agency orgId;
 
     public Paymentorder() {
@@ -124,14 +124,6 @@ public class Paymentorder implements Serializable {
 
     public void setBillId(Bill billId) {
         this.billId = billId;
-    }
-
-    public Agency getSupId() {
-        return supId;
-    }
-
-    public void setSupId(Agency supId) {
-        this.supId = supId;
     }
 
     public Agency getOrgId() {

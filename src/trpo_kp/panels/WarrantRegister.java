@@ -43,7 +43,7 @@ public class WarrantRegister extends javax.swing.JPanel {
         for (Department department1 : departments) {
             depList.addItem(department1.getName());
         }
-        List<Paymentorder> paymentOrders = OrganisationControl.getPaymentOrders();
+        List<Paymentorder> paymentOrders = OrganisationControl.getFreePaymentOrders();
         for (Paymentorder paymentorder : paymentOrders) {
             paymentOrderList.addItem(/*"№ " + */paymentorder.getId()/* + " сумма " + paymentorder.getAmount()*/);
         }

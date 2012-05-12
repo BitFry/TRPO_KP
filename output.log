@@ -1,866 +1,233 @@
-[EL Finest]: 2012-05-12 16:59:00.125--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Begin predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Initial; factoryCount 0
-[EL Finest]: 2012-05-12 16:59:00.137--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.orm.throw.exceptions; default value=true
-[EL Finest]: 2012-05-12 16:59:00.148--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.jpa.uppercase-column-names; default value=false
-[EL Finer]: 2012-05-12 16:59:00.149--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Searching for default mapping file in file:/D:/GITREP/TRPO_KP.git/build/classes/
-[EL Finer]: 2012-05-12 16:59:00.16--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Searching for default mapping file in file:/D:/GITREP/TRPO_KP.git/build/classes/
-[EL Config]: 2012-05-12 16:59:00.248--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Department] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.265--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field orgId] is being defaulted to: class trpo_kp.tables.Agency.
-[EL Config]: 2012-05-12 16:59:00.279--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field employeeList] is being defaulted to: class trpo_kp.tables.Employee.
-[EL Config]: 2012-05-12 16:59:00.28--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Employee] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.28--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field warrantList] is being defaulted to: class trpo_kp.tables.Warrant.
-[EL Config]: 2012-05-12 16:59:00.281--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field depId] is being defaulted to: class trpo_kp.tables.Department.
-[EL Config]: 2012-05-12 16:59:00.281--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Agency] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.281--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field billList] is being defaulted to: class trpo_kp.tables.Bill.
-[EL Config]: 2012-05-12 16:59:00.281--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field departmentList] is being defaulted to: class trpo_kp.tables.Department.
-[EL Config]: 2012-05-12 16:59:00.282--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field productList] is being defaulted to: class trpo_kp.tables.Product.
-[EL Config]: 2012-05-12 16:59:00.282--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field billList1] is being defaulted to: class trpo_kp.tables.Bill.
-[EL Config]: 2012-05-12 16:59:00.282--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field paymentorderList] is being defaulted to: class trpo_kp.tables.Paymentorder.
-[EL Config]: 2012-05-12 16:59:00.282--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Warrow] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.283--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Bill] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.283--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field supId] is being defaulted to: class trpo_kp.tables.Agency.
-[EL Config]: 2012-05-12 16:59:00.283--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field paymentorderList] is being defaulted to: class trpo_kp.tables.Paymentorder.
-[EL Config]: 2012-05-12 16:59:00.283--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
-[EL Config]: 2012-05-12 16:59:00.284--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field clientId] is being defaulted to: class trpo_kp.tables.Agency.
-[EL Config]: 2012-05-12 16:59:00.284--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Docrow] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.284--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field poId] is being defaulted to: class trpo_kp.tables.Paymentorder.
-[EL Config]: 2012-05-12 16:59:00.284--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field warrownumber] is being defaulted to: class trpo_kp.tables.Warrownumber.
-[EL Config]: 2012-05-12 16:59:00.284--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field billrownumber] is being defaulted to: class trpo_kp.tables.Billrownumber.
-[EL Config]: 2012-05-12 16:59:00.284--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field billId] is being defaulted to: class trpo_kp.tables.Bill.
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field warId] is being defaulted to: class trpo_kp.tables.Warrant.
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field productId] is being defaulted to: class trpo_kp.tables.Product.
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Warrownumber] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field rowId] is being defaulted to: class trpo_kp.tables.Docrow.
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Billrownumber] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field rowId] is being defaulted to: class trpo_kp.tables.Docrow.
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Paymentorder] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.285--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field orgId] is being defaulted to: class trpo_kp.tables.Agency.
-[EL Config]: 2012-05-12 16:59:00.286--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field warrant] is being defaulted to: class trpo_kp.tables.Warrant.
-[EL Config]: 2012-05-12 16:59:00.286--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field supId] is being defaulted to: class trpo_kp.tables.Agency.
-[EL Config]: 2012-05-12 16:59:00.286--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field billId] is being defaulted to: class trpo_kp.tables.Bill.
-[EL Config]: 2012-05-12 16:59:00.286--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
-[EL Config]: 2012-05-12 16:59:00.286--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Warrant] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.286--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field emplId] is being defaulted to: class trpo_kp.tables.Employee.
-[EL Config]: 2012-05-12 16:59:00.287--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
-[EL Config]: 2012-05-12 16:59:00.287--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field orderId] is being defaulted to: class trpo_kp.tables.Paymentorder.
-[EL Config]: 2012-05-12 16:59:00.287--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Billrow] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.287--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Product] is set to [FIELD].
-[EL Config]: 2012-05-12 16:59:00.287--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field supId] is being defaulted to: class trpo_kp.tables.Agency.
-[EL Config]: 2012-05-12 16:59:00.287--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
-[EL Config]: 2012-05-12 16:59:00.288--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Department] is being defaulted to: Department.
-[EL Config]: 2012-05-12 16:59:00.301--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Employee] is being defaulted to: Employee.
-[EL Config]: 2012-05-12 16:59:00.302--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Agency] is being defaulted to: Agency.
-[EL Config]: 2012-05-12 16:59:00.303--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Warrow] is being defaulted to: Warrow.
-[EL Config]: 2012-05-12 16:59:00.303--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Bill] is being defaulted to: Bill.
-[EL Config]: 2012-05-12 16:59:00.304--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Docrow] is being defaulted to: Docrow.
-[EL Config]: 2012-05-12 16:59:00.304--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Warrownumber] is being defaulted to: Warrownumber.
-[EL Config]: 2012-05-12 16:59:00.304--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Billrownumber] is being defaulted to: Billrownumber.
-[EL Config]: 2012-05-12 16:59:00.304--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Paymentorder] is being defaulted to: Paymentorder.
-[EL Config]: 2012-05-12 16:59:00.305--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Warrant] is being defaulted to: Warrant.
-[EL Config]: 2012-05-12 16:59:00.305--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Billrow] is being defaulted to: Billrow.
-[EL Config]: 2012-05-12 16:59:00.305--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Product] is being defaulted to: Product.
-[EL Finest]: 2012-05-12 16:59:00.339--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--End predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 0
-[EL Finest]: 2012-05-12 16:59:00.34--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Begin predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 0
-[EL Finest]: 2012-05-12 16:59:00.34--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--End predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 1
-[EL Finest]: 2012-05-12 16:59:00.342--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Begin deploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 1
-[EL Finer]: 2012-05-12 16:59:00.358--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Could not initialize Validation Factory. Encountered following exception: java.lang.NoClassDefFoundError: javax/validation/Validation
-[EL Finest]: 2012-05-12 16:59:00.361--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.logging.level; value=ALL; translated value=ALL
-[EL Finest]: 2012-05-12 16:59:00.362--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.logging.level; value=ALL; translated value=ALL
-[EL Finest]: 2012-05-12 16:59:00.362--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.user; value=system
-[EL Finest]: 2012-05-12 16:59:00.362--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.password; value=xxxxxx
-[EL Finest]: 2012-05-12 16:59:00.754--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.driver; value=oracle.jdbc.OracleDriver
-[EL Finest]: 2012-05-12 16:59:00.754--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.url; value=jdbc:oracle:thin:@localhost:1521:XE
-[EL Info]: 2012-05-12 16:59:00.755--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
-[EL Finest]: 2012-05-12 16:59:00.867--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.HSQLPlatform, RegularExpression: (?i)hsql.*.
-[EL Finest]: 2012-05-12 16:59:00.867--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.InformixPlatform, RegularExpression: (?i)informix.*.
-[EL Finest]: 2012-05-12 16:59:00.867--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.PointBasePlatform, RegularExpression: (?i)pointbase.*.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.DB2Platform, RegularExpression: (?i).*db2.*.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.SQLServerPlatform, RegularExpression: (?i)microsoft.*.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.PostgreSQLPlatform, RegularExpression: (?i)postgresql.*.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.MaxDBPlatform, RegularExpression: SAP DB.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.H2Platform, RegularExpression: (?i)h2.*.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.SybasePlatform, RegularExpression: (?i)(sybase.*)|(adaptive server enterprise.*)|(SQL Server).
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.FirebirdPlatform, RegularExpression: (?i)firebird.*.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.JavaDBPlatform, RegularExpression: (?i).*derby.
-[EL Finest]: 2012-05-12 16:59:00.868--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.AccessPlatform, RegularExpression: (?i)access.*.
-[EL Finest]: 2012-05-12 16:59:00.869--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.SymfowarePlatform, RegularExpression: (?i).*symfoware.*.
-[EL Finest]: 2012-05-12 16:59:00.869--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.oracle.Oracle10Platform, RegularExpression: (?i)oracle.*.
-[EL Fine]: 2012-05-12 16:59:00.869--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.oracle.Oracle10Platform
-[EL Config]: 2012-05-12 16:59:00.883--ServerSession(23414511)--Connection(6068467)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+[EL Finest]: 2012-05-12 18:16:28.319--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Begin predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Initial; factoryCount 0
+[EL Finest]: 2012-05-12 18:16:28.331--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.orm.throw.exceptions; default value=true
+[EL Finest]: 2012-05-12 18:16:28.342--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.jpa.uppercase-column-names; default value=false
+[EL Finer]: 2012-05-12 18:16:28.342--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Searching for default mapping file in file:/D:/GITREP/TRPO_KP.git/build/classes/
+[EL Finer]: 2012-05-12 18:16:28.354--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Searching for default mapping file in file:/D:/GITREP/TRPO_KP.git/build/classes/
+[EL Config]: 2012-05-12 18:16:28.443--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Department] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.461--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field orgId] is being defaulted to: class trpo_kp.tables.Agency.
+[EL Config]: 2012-05-12 18:16:28.474--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field employeeList] is being defaulted to: class trpo_kp.tables.Employee.
+[EL Config]: 2012-05-12 18:16:28.475--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Employee] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.475--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field warrantList] is being defaulted to: class trpo_kp.tables.Warrant.
+[EL Config]: 2012-05-12 18:16:28.476--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field depId] is being defaulted to: class trpo_kp.tables.Department.
+[EL Config]: 2012-05-12 18:16:28.476--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Agency] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.477--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field billList] is being defaulted to: class trpo_kp.tables.Bill.
+[EL Config]: 2012-05-12 18:16:28.477--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field departmentList] is being defaulted to: class trpo_kp.tables.Department.
+[EL Config]: 2012-05-12 18:16:28.477--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field productList] is being defaulted to: class trpo_kp.tables.Product.
+[EL Config]: 2012-05-12 18:16:28.477--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field billList1] is being defaulted to: class trpo_kp.tables.Bill.
+[EL Config]: 2012-05-12 18:16:28.478--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field paymentorderList] is being defaulted to: class trpo_kp.tables.Paymentorder.
+[EL Config]: 2012-05-12 18:16:28.478--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Warrow] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.478--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Bill] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.479--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field supId] is being defaulted to: class trpo_kp.tables.Agency.
+[EL Config]: 2012-05-12 18:16:28.479--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field paymentorderList] is being defaulted to: class trpo_kp.tables.Paymentorder.
+[EL Config]: 2012-05-12 18:16:28.479--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
+[EL Config]: 2012-05-12 18:16:28.479--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field clientId] is being defaulted to: class trpo_kp.tables.Agency.
+[EL Config]: 2012-05-12 18:16:28.479--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Docrow] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.479--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field poId] is being defaulted to: class trpo_kp.tables.Paymentorder.
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field warrownumber] is being defaulted to: class trpo_kp.tables.Warrownumber.
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field billrownumber] is being defaulted to: class trpo_kp.tables.Billrownumber.
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field billId] is being defaulted to: class trpo_kp.tables.Bill.
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field warId] is being defaulted to: class trpo_kp.tables.Warrant.
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field productId] is being defaulted to: class trpo_kp.tables.Product.
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Warrownumber] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.48--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field rowId] is being defaulted to: class trpo_kp.tables.Docrow.
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Billrownumber] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field rowId] is being defaulted to: class trpo_kp.tables.Docrow.
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Paymentorder] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field orgId] is being defaulted to: class trpo_kp.tables.Agency.
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field warrant] is being defaulted to: class trpo_kp.tables.Warrant.
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field billId] is being defaulted to: class trpo_kp.tables.Bill.
+[EL Config]: 2012-05-12 18:16:28.481--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
+[EL Config]: 2012-05-12 18:16:28.482--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Warrant] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.482--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field emplId] is being defaulted to: class trpo_kp.tables.Employee.
+[EL Config]: 2012-05-12 18:16:28.482--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
+[EL Config]: 2012-05-12 18:16:28.482--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to one mapping element [field orderId] is being defaulted to: class trpo_kp.tables.Paymentorder.
+[EL Config]: 2012-05-12 18:16:28.482--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Billrow] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.482--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class trpo_kp.tables.Product] is set to [FIELD].
+[EL Config]: 2012-05-12 18:16:28.483--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field supId] is being defaulted to: class trpo_kp.tables.Agency.
+[EL Config]: 2012-05-12 18:16:28.483--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field docrowList] is being defaulted to: class trpo_kp.tables.Docrow.
+[EL Config]: 2012-05-12 18:16:28.483--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Department] is being defaulted to: Department.
+[EL Config]: 2012-05-12 18:16:28.498--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Employee] is being defaulted to: Employee.
+[EL Config]: 2012-05-12 18:16:28.499--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Agency] is being defaulted to: Agency.
+[EL Config]: 2012-05-12 18:16:28.499--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Warrow] is being defaulted to: Warrow.
+[EL Config]: 2012-05-12 18:16:28.5--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Bill] is being defaulted to: Bill.
+[EL Config]: 2012-05-12 18:16:28.5--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Docrow] is being defaulted to: Docrow.
+[EL Config]: 2012-05-12 18:16:28.5--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Warrownumber] is being defaulted to: Warrownumber.
+[EL Config]: 2012-05-12 18:16:28.5--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Billrownumber] is being defaulted to: Billrownumber.
+[EL Config]: 2012-05-12 18:16:28.501--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Paymentorder] is being defaulted to: Paymentorder.
+[EL Config]: 2012-05-12 18:16:28.501--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Warrant] is being defaulted to: Warrant.
+[EL Config]: 2012-05-12 18:16:28.501--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Billrow] is being defaulted to: Billrow.
+[EL Config]: 2012-05-12 18:16:28.502--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class trpo_kp.tables.Product] is being defaulted to: Product.
+[EL Finest]: 2012-05-12 18:16:28.536--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--End predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 0
+[EL Finest]: 2012-05-12 18:16:28.536--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Begin predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 0
+[EL Finest]: 2012-05-12 18:16:28.536--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--End predeploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 1
+[EL Finest]: 2012-05-12 18:16:28.538--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Begin deploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Predeployed; factoryCount 1
+[EL Finer]: 2012-05-12 18:16:28.554--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Could not initialize Validation Factory. Encountered following exception: java.lang.NoClassDefFoundError: javax/validation/Validation
+[EL Finest]: 2012-05-12 18:16:28.558--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.logging.level; value=ALL; translated value=ALL
+[EL Finest]: 2012-05-12 18:16:28.558--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=eclipselink.logging.level; value=ALL; translated value=ALL
+[EL Finest]: 2012-05-12 18:16:28.558--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.user; value=system
+[EL Finest]: 2012-05-12 18:16:28.558--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.password; value=xxxxxx
+[EL Finest]: 2012-05-12 18:16:28.954--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.driver; value=oracle.jdbc.OracleDriver
+[EL Finest]: 2012-05-12 18:16:28.954--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--property=javax.persistence.jdbc.url; value=jdbc:oracle:thin:@localhost:1521:XE
+[EL Info]: 2012-05-12 18:16:28.955--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.2.0.v20110202-r8913
+[EL Finest]: 2012-05-12 18:16:29.054--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.HSQLPlatform, RegularExpression: (?i)hsql.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.InformixPlatform, RegularExpression: (?i)informix.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.PointBasePlatform, RegularExpression: (?i)pointbase.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.DB2Platform, RegularExpression: (?i).*db2.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.SQLServerPlatform, RegularExpression: (?i)microsoft.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.PostgreSQLPlatform, RegularExpression: (?i)postgresql.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.MaxDBPlatform, RegularExpression: SAP DB.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.H2Platform, RegularExpression: (?i)h2.*.
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.SybasePlatform, RegularExpression: (?i)(sybase.*)|(adaptive server enterprise.*)|(SQL Server).
+[EL Finest]: 2012-05-12 18:16:29.055--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.FirebirdPlatform, RegularExpression: (?i)firebird.*.
+[EL Finest]: 2012-05-12 18:16:29.056--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.JavaDBPlatform, RegularExpression: (?i).*derby.
+[EL Finest]: 2012-05-12 18:16:29.056--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.AccessPlatform, RegularExpression: (?i)access.*.
+[EL Finest]: 2012-05-12 18:16:29.056--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.SymfowarePlatform, RegularExpression: (?i).*symfoware.*.
+[EL Finest]: 2012-05-12 18:16:29.056--Thread(Thread[AWT-EventQueue-0,6,main])--DBPlatform: org.eclipse.persistence.platform.database.oracle.Oracle10Platform, RegularExpression: (?i)oracle.*.
+[EL Fine]: 2012-05-12 18:16:29.056--Thread(Thread[AWT-EventQueue-0,6,main])--Detected Vendor platform: org.eclipse.persistence.platform.database.oracle.Oracle10Platform
+[EL Config]: 2012-05-12 18:16:29.07--ServerSession(7461949)--Connection(12514145)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
 	platform=>Oracle10Platform
 	user name=> "system"
 	datasource URL=> "jdbc:oracle:thin:@localhost:1521:XE"
 ))
-[EL Config]: 2012-05-12 16:59:00.922--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:oracle:thin:@localhost:1521:XE
+[EL Config]: 2012-05-12 18:16:29.096--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:oracle:thin:@localhost:1521:XE
 	User: SYSTEM
 	Database: Oracle  Version: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
 	Driver: Oracle JDBC driver  Version: 10.1.0.2.0
-[EL Finest]: 2012-05-12 16:59:00.922--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Finest]: 2012-05-12 16:59:00.922--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:00.926--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequencing connected, state is Preallocation_NoTransaction_State
-[EL Finest]: 2012-05-12 16:59:00.926--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence WARRANT_SEQ: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.926--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence DEPARTMENT_SEQ: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.926--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence BILL_SEQ: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.926--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence BILLROWNUMBER_SEQ: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.926--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence WARROWNUMBER_SEQ: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.927--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence PAYMENTORDER_SEQ: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.927--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence DOCROW_SEQ1: preallocation size 1
-[EL Finest]: 2012-05-12 16:59:00.927--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence AGENCY_SEQ: preallocation size 1
-[EL Info]: 2012-05-12 16:59:01.117--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU login successful
-[EL Finer]: 2012-05-12 16:59:01.127--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Warrant_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.127--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Department_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.128--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Bill_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.128--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Billrownumber_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.128--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Employee_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.128--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Warrownumber_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.128--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Warrow_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.129--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Product_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.129--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Paymentorder_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.129--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Docrow_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.129--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Billrow_] not found during initialization.
-[EL Finer]: 2012-05-12 16:59:01.13--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Agency_] not found during initialization.
-[EL Finest]: 2012-05-12 16:59:01.13--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--End deploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Deployed; factoryCount 1
-[EL Finer]: 2012-05-12 16:59:01.147--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 14454885
-[EL Finer]: 2012-05-12 16:59:01.157--ClientSession(14454885)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 23119024
-[EL Finest]: 2012-05-12 16:59:01.157--UnitOfWork(23119024)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="Agency.findByName" referenceClass=Agency sql="SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (NAME = ?)")
-[EL Finest]: 2012-05-12 16:59:01.158--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:01.158--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (NAME = ?)
+[EL Finest]: 2012-05-12 18:16:29.096--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Finest]: 2012-05-12 18:16:29.096--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:29.1--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequencing connected, state is Preallocation_NoTransaction_State
+[EL Finest]: 2012-05-12 18:16:29.1--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence BILL_SEQ: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.1--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence BILLROWNUMBER_SEQ: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.101--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence WARRANT_SEQ: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.101--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence DOCROW_SEQ1: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.101--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence AGENCY_SEQ: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.101--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence DEPARTMENT_SEQ: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.101--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence WARROWNUMBER_SEQ: preallocation size 1
+[EL Finest]: 2012-05-12 18:16:29.101--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--sequence PAYMENTORDER_SEQ: preallocation size 1
+[EL Info]: 2012-05-12 18:16:29.295--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU login successful
+[EL Finer]: 2012-05-12 18:16:29.305--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Bill_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.305--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Employee_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.306--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Billrownumber_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.306--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Warrant_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.306--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Docrow_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.306--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Product_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.306--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Agency_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.307--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Warrow_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.307--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Billrow_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.307--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Department_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.307--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Warrownumber_] not found during initialization.
+[EL Finer]: 2012-05-12 18:16:29.307--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Canonical Metamodel class [trpo_kp.tables.Paymentorder_] not found during initialization.
+[EL Finest]: 2012-05-12 18:16:29.308--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--End deploying Persistence Unit TRPO_KPPU; session file:/D:/GITREP/TRPO_KP.git/build/classes/_TRPO_KPPU; state Deployed; factoryCount 1
+[EL Finer]: 2012-05-12 18:16:29.325--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 13007496
+[EL Finer]: 2012-05-12 18:16:29.334--ClientSession(13007496)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 32803057
+[EL Finest]: 2012-05-12 18:16:29.334--UnitOfWork(32803057)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="Agency.findByName" referenceClass=Agency sql="SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (NAME = ?)")
+[EL Finest]: 2012-05-12 18:16:29.335--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:29.335--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (NAME = ?)
 	bind => [Моя уютная контора]
-[EL Finest]: 2012-05-12 16:59:01.249--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finer]: 2012-05-12 16:59:01.255--UnitOfWork(23119024)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:01.255--ClientSession(14454885)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
-[EL Finer]: 2012-05-12 16:59:02.57--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 23154843
-[EL Finer]: 2012-05-12 16:59:02.571--ClientSession(23154843)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 32702517
-[EL Finest]: 2012-05-12 16:59:02.573--UnitOfWork(32702517)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.574--UnitOfWork(32702517)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.575--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.575--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
+[EL Finest]: 2012-05-12 18:16:29.425--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finer]: 2012-05-12 18:16:29.43--UnitOfWork(32803057)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
+[EL Finer]: 2012-05-12 18:16:29.43--ClientSession(13007496)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
+[EL Finer]: 2012-05-12 18:16:30.686--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 33468166
+[EL Finer]: 2012-05-12 18:16:30.686--ClientSession(33468166)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 26524183
+[EL Finest]: 2012-05-12 18:16:30.689--UnitOfWork(26524183)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.69--UnitOfWork(26524183)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.691--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.691--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
 	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.576--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.577--UnitOfWork(32702517)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
-[EL Finer]: 2012-05-12 16:59:02.577--UnitOfWork(32702517)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:02.577--ClientSession(23154843)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
-[EL Finer]: 2012-05-12 16:59:02.577--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 21324485
-[EL Finer]: 2012-05-12 16:59:02.577--ClientSession(21324485)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 845718
-[EL Finest]: 2012-05-12 16:59:02.577--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.577--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.577--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.578--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
+[EL Finest]: 2012-05-12 18:16:30.692--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:30.692--UnitOfWork(26524183)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
+[EL Finer]: 2012-05-12 18:16:30.693--UnitOfWork(26524183)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
+[EL Finer]: 2012-05-12 18:16:30.693--ClientSession(33468166)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
+[EL Finer]: 2012-05-12 18:16:30.693--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 6633803
+[EL Finer]: 2012-05-12 18:16:30.693--ClientSession(6633803)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 26509746
+[EL Finest]: 2012-05-12 18:16:30.693--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.693--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.693--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.693--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
 	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.579--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.579--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
-[EL Finer]: 2012-05-12 16:59:02.579--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:02.579--ClientSession(21324485)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
-[EL Finest]: 2012-05-12 16:59:02.58--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="departmentList" referenceClass=Department sql="SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.58--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.58--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)
+[EL Finest]: 2012-05-12 18:16:30.694--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:30.694--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
+[EL Finer]: 2012-05-12 18:16:30.695--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
+[EL Finer]: 2012-05-12 18:16:30.695--ClientSession(6633803)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
+[EL Finest]: 2012-05-12 18:16:30.695--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="departmentList" referenceClass=Department sql="SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)")
+[EL Finest]: 2012-05-12 18:16:30.695--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.695--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)
 	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.581--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.581--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.581--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.581--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.582--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.582--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.582--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.582--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.584--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.584--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.584--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.584--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.584--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.584--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.585--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.585--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.585--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.585--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.585--UnitOfWork(845718)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finer]: 2012-05-12 16:59:02.588--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 22331476
-[EL Finer]: 2012-05-12 16:59:02.588--ClientSession(22331476)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 18799851
-[EL Finest]: 2012-05-12 16:59:02.588--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.588--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.589--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.59--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.59--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.59--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.59--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.59--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.59--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
+[EL Finest]: 2012-05-12 18:16:30.696--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:30.696--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.697--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.697--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.697--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.697--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.697--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.697--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
+[EL Finest]: 2012-05-12 18:16:30.699--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.699--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=2 ]
+[EL Finest]: 2012-05-12 18:16:30.699--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.699--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=3 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=4 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=6 ]
+[EL Finest]: 2012-05-12 18:16:30.7--UnitOfWork(26509746)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finer]: 2012-05-12 18:16:30.703--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 3789605
+[EL Finer]: 2012-05-12 18:16:30.703--ClientSession(3789605)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 5585368
+[EL Finest]: 2012-05-12 18:16:30.703--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=2 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=3 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=4 ]
+[EL Finest]: 2012-05-12 18:16:30.704--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.705--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.705--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.705--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=6 ]
+[EL Finest]: 2012-05-12 18:16:30.705--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.705--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.705--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.706--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
 	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.592--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.592--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.592--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="departmentList" referenceClass=Department sql="SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.592--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.592--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)
+[EL Finest]: 2012-05-12 18:16:30.707--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:30.707--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
+[EL Finest]: 2012-05-12 18:16:30.707--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="departmentList" referenceClass=Department sql="SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)")
+[EL Finest]: 2012-05-12 18:16:30.707--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.707--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)
 	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.593--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.593--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.593--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.594--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.594--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.594--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.594--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finer]: 2012-05-12 16:59:02.595--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:02.595--ClientSession(22331476)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
-[EL Finest]: 2012-05-12 16:59:02.595--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="employeeList" referenceClass=Employee sql="SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.595--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.595--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)
+[EL Finest]: 2012-05-12 18:16:30.708--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:30.708--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.708--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.708--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.709--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.709--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finest]: 2012-05-12 18:16:30.709--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
+[EL Finer]: 2012-05-12 18:16:30.71--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
+[EL Finer]: 2012-05-12 18:16:30.71--ClientSession(3789605)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
+[EL Finest]: 2012-05-12 18:16:30.71--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="employeeList" referenceClass=Employee sql="SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)")
+[EL Finest]: 2012-05-12 18:16:30.71--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.71--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)
 	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.598--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.598--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.598--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.598--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.598--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.599--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.6--UnitOfWork(18799851)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finer]: 2012-05-12 16:59:02.601--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 20612044
-[EL Finer]: 2012-05-12 16:59:02.601--ClientSession(20612044)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 10670852
-[EL Finest]: 2012-05-12 16:59:02.601--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.601--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.601--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.601--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.601--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.602--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.603--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.604--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.604--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.604--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.605--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.605--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.605--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="departmentList" referenceClass=Department sql="SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.606--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.606--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.606--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.606--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="employeeList" referenceClass=Employee sql="SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.607--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.608--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.609--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.609--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.609--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.609--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finer]: 2012-05-12 16:59:02.61--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:02.61--ClientSession(20612044)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
-[EL Finest]: 2012-05-12 16:59:02.61--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="paymentorderList" referenceClass=Paymentorder sql="SELECT ID, AMOUNT, PODATE, BILL_ID, ORG_ID, SUP_ID FROM PAYMENTORDER WHERE (ORG_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.61--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.61--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, AMOUNT, PODATE, BILL_ID, ORG_ID, SUP_ID FROM PAYMENTORDER WHERE (ORG_ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.611--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.611--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.612--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.612--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, CLIENT_ID, SUP_ID FROM BILL WHERE (ID = ?)
-	bind => [6]
-[EL Finest]: 2012-05-12 16:59:02.612--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.613--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="clientId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.613--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.613--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.613--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
-	bind => [3]
-[EL Finest]: 2012-05-12 16:59:02.614--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.614--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.614--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.614--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrant" referenceClass=Warrant sql="SELECT ID, ISSUE_DATE, VALID_UNTIL, EMPL_ID, ORDER_ID FROM WARRANT WHERE (ORDER_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.614--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.614--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, VALID_UNTIL, EMPL_ID, ORDER_ID FROM WARRANT WHERE (ORDER_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.615--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.615--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="emplId" referenceClass=Employee )
-[EL Finest]: 2012-05-12 16:59:02.615--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orderId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.616--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.617--UnitOfWork(10670852)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finer]: 2012-05-12 16:59:02.617--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 15230484
-[EL Finer]: 2012-05-12 16:59:02.617--ClientSession(15230484)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 25553167
-[EL Finest]: 2012-05-12 16:59:02.617--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.617--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.617--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.617--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.618--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.619--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.62--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.62--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.62--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.62--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.621--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.621--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.621--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.621--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.621--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.621--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.621--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.622--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ADRESS, BANK, BIK, CHIEF_ACCOUNTANT, DIRECTOR, EMAIL, INN, KPP, KS, NAME, PHONE, RS, WEBSITE FROM AGENCY WHERE (ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.622--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.623--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Revert the object's attributes trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.623--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="departmentList" referenceClass=Department sql="SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.623--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.623--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NAME, ORG_ID FROM DEPARTMENT WHERE (ORG_ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.624--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.625--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="employeeList" referenceClass=Employee sql="SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.625--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.625--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, ISSUED_BY, NAME, PNUMBER, POST, SERIES, DEP_ID FROM EMPLOYEE WHERE (DEP_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.626--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.626--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.626--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.626--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.626--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
-[EL Finest]: 2012-05-12 16:59:02.627--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="paymentorderList" referenceClass=Paymentorder sql="SELECT ID, AMOUNT, PODATE, BILL_ID, ORG_ID, SUP_ID FROM PAYMENTORDER WHERE (ORG_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.627--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.627--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, AMOUNT, PODATE, BILL_ID, ORG_ID, SUP_ID FROM PAYMENTORDER WHERE (ORG_ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.628--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.628--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.628--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orgId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.628--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.628--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrant" referenceClass=Warrant sql="SELECT ID, ISSUE_DATE, VALID_UNTIL, EMPL_ID, ORDER_ID FROM WARRANT WHERE (ORDER_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.628--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.629--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ISSUE_DATE, VALID_UNTIL, EMPL_ID, ORDER_ID FROM WARRANT WHERE (ORDER_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.629--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.629--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="emplId" referenceClass=Employee )
-[EL Finest]: 2012-05-12 16:59:02.63--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="orderId" referenceClass=Paymentorder )
-[EL Finer]: 2012-05-12 16:59:02.63--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:02.63--ClientSession(15230484)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
-[EL Finest]: 2012-05-12 16:59:02.63--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="docrowList" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.63--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.63--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, COUNT, STATUS, BILL_ID, PO_ID, PRODUCT_ID, WAR_ID FROM DOCROW WHERE (PO_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.631--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.632--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.632--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="poId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.632--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="productId" referenceClass=Product )
-[EL Finest]: 2012-05-12 16:59:02.632--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.632--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, EXCISE, NAME, NDS, PRICE, UINT, SUP_ID FROM PRODUCT WHERE (ID = ?)
-	bind => [21]
-[EL Finest]: 2012-05-12 16:59:02.633--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.633--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.633--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warId" referenceClass=Warrant )
-[EL Finest]: 2012-05-12 16:59:02.633--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billrownumber" referenceClass=Billrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.633--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.633--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.634--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.634--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.634--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrownumber" referenceClass=Warrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.635--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.635--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)
-	bind => [1]
-[EL Finest]: 2012-05-12 16:59:02.635--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.635--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.636--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.636--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="poId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.636--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="productId" referenceClass=Product )
-[EL Finest]: 2012-05-12 16:59:02.636--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.636--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, EXCISE, NAME, NDS, PRICE, UINT, SUP_ID FROM PRODUCT WHERE (ID = ?)
-	bind => [17]
-[EL Finest]: 2012-05-12 16:59:02.637--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.637--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.637--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warId" referenceClass=Warrant )
-[EL Finest]: 2012-05-12 16:59:02.637--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billrownumber" referenceClass=Billrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.637--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.637--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)
-	bind => [2]
-[EL Finest]: 2012-05-12 16:59:02.638--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.638--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.638--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrownumber" referenceClass=Warrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.638--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.638--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)
-	bind => [2]
-[EL Finest]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="poId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="productId" referenceClass=Product )
-[EL Finest]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.639--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, EXCISE, NAME, NDS, PRICE, UINT, SUP_ID FROM PRODUCT WHERE (ID = ?)
-	bind => [18]
-[EL Finest]: 2012-05-12 16:59:02.64--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.64--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.64--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warId" referenceClass=Warrant )
-[EL Finest]: 2012-05-12 16:59:02.64--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billrownumber" referenceClass=Billrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.64--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.64--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)
-	bind => [3]
-[EL Finest]: 2012-05-12 16:59:02.641--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.641--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.641--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrownumber" referenceClass=Warrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.641--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.641--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)
-	bind => [3]
-[EL Finest]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="poId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="productId" referenceClass=Product )
-[EL Finest]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.642--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, EXCISE, NAME, NDS, PRICE, UINT, SUP_ID FROM PRODUCT WHERE (ID = ?)
-	bind => [19]
-[EL Finest]: 2012-05-12 16:59:02.643--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.643--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.643--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warId" referenceClass=Warrant )
-[EL Finest]: 2012-05-12 16:59:02.643--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billrownumber" referenceClass=Billrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.644--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.644--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)
-	bind => [4]
-[EL Finest]: 2012-05-12 16:59:02.644--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.644--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.644--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrownumber" referenceClass=Warrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.645--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.645--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)
-	bind => [4]
-[EL Finest]: 2012-05-12 16:59:02.645--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.645--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.645--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.646--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="poId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.646--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="productId" referenceClass=Product )
-[EL Finest]: 2012-05-12 16:59:02.646--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.646--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, EXCISE, NAME, NDS, PRICE, UINT, SUP_ID FROM PRODUCT WHERE (ID = ?)
-	bind => [20]
-[EL Finest]: 2012-05-12 16:59:02.646--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.647--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.647--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warId" referenceClass=Warrant )
-[EL Finest]: 2012-05-12 16:59:02.647--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billrownumber" referenceClass=Billrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.647--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.647--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.648--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.648--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.648--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrownumber" referenceClass=Warrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.648--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.648--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)
-	bind => [5]
-[EL Finest]: 2012-05-12 16:59:02.648--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.649--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.649--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billId" referenceClass=Bill )
-[EL Finest]: 2012-05-12 16:59:02.649--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="poId" referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:02.649--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="productId" referenceClass=Product )
-[EL Finest]: 2012-05-12 16:59:02.649--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.649--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, EXCISE, NAME, NDS, PRICE, UINT, SUP_ID FROM PRODUCT WHERE (ID = ?)
-	bind => [22]
-[EL Finest]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="supId" referenceClass=Agency )
-[EL Finest]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warId" referenceClass=Warrant )
-[EL Finest]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="billrownumber" referenceClass=Billrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM BILLROWNUMBER WHERE (ROW_ID = ?)
-	bind => [6]
-[EL Finest]: 2012-05-12 16:59:02.65--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.651--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.651--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="warrownumber" referenceClass=Warrownumber sql="SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)")
-[EL Finest]: 2012-05-12 16:59:02.651--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:02.651--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ROWNUMBER, ROW_ID FROM WARROWNUMBER WHERE (ROW_ID = ?)
-	bind => [6]
-[EL Finest]: 2012-05-12 16:59:02.651--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:02.651--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="rowId" referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:02.651--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=21 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.652--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=17 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1001 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:02.653--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=18 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1002 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.654--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=19 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1003 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:02.655--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=20 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.656--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1004 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=22 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.657--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:02.658--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1005 ]
-[EL Finest]: 2012-05-12 16:59:02.658--UnitOfWork(25553167)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=6 ]
-[EL Finer]: 2012-05-12 16:59:05.713--ServerSession(23414511)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 13018016
-[EL Finer]: 2012-05-12 16:59:05.713--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 18909403
-[EL Finest]: 2012-05-12 16:59:05.713--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--persist() operation called on: trpo_kp.tables.Warrant[ id=null ].
-[EL Finest]: 2012-05-12 16:59:05.714--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARRANT_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.714--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.715--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARRANT_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.716--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.716--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 001 -> trpo_kp.tables.Warrant[ id=null ])
-[EL Finest]: 2012-05-12 16:59:05.717--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.717--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.717--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.718--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.718--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.718--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.718--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.718--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.719--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.719--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.719--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.719--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.719--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.72--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=21 ]
-[EL Finest]: 2012-05-12 16:59:05.72--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.72--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.72--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.72--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.72--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.721--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.721--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the object trpo_kp.tables.Docrow[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.721--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.722--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.722--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.723--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.723--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 006 -> trpo_kp.tables.Warrownumber[ id=null ])
-[EL Finest]: 2012-05-12 16:59:05.723--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:05.724--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.724--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.724--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=17 ]
-[EL Finest]: 2012-05-12 16:59:05.724--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.724--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.725--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:05.725--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:05.725--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1001 ]
-[EL Finest]: 2012-05-12 16:59:05.725--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:05.725--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the object trpo_kp.tables.Docrow[ id=2 ]
-[EL Finest]: 2012-05-12 16:59:05.726--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.726--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.726--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.727--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.727--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 007 -> trpo_kp.tables.Warrownumber[ id=null ])
-[EL Finest]: 2012-05-12 16:59:05.727--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.728--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.728--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.728--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=18 ]
-[EL Finest]: 2012-05-12 16:59:05.728--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.729--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.729--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.729--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.729--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1002 ]
-[EL Finest]: 2012-05-12 16:59:05.729--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.73--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the object trpo_kp.tables.Docrow[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.73--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.73--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.73--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.731--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.732--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 008 -> trpo_kp.tables.Warrownumber[ id=null ])
-[EL Finest]: 2012-05-12 16:59:05.732--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:05.732--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.732--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.733--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=19 ]
-[EL Finest]: 2012-05-12 16:59:05.733--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.733--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.733--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:05.733--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:05.734--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1003 ]
-[EL Finest]: 2012-05-12 16:59:05.734--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:05.734--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the object trpo_kp.tables.Docrow[ id=4 ]
-[EL Finest]: 2012-05-12 16:59:05.734--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.734--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.735--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.735--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.736--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 009 -> trpo_kp.tables.Warrownumber[ id=null ])
-[EL Finest]: 2012-05-12 16:59:05.736--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.736--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.736--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.737--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=20 ]
-[EL Finest]: 2012-05-12 16:59:05.737--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.737--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.737--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.737--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.737--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1004 ]
-[EL Finest]: 2012-05-12 16:59:05.738--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.738--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the object trpo_kp.tables.Docrow[ id=5 ]
-[EL Finest]: 2012-05-12 16:59:05.738--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.738--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.739--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.739--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.739--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 010 -> trpo_kp.tables.Warrownumber[ id=null ])
-[EL Finest]: 2012-05-12 16:59:05.74--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Merge clone with references trpo_kp.tables.Docrow[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.74--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Bill[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.74--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Paymentorder[ id=1 ]
-[EL Finest]: 2012-05-12 16:59:05.74--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Product[ id=22 ]
-[EL Finest]: 2012-05-12 16:59:05.741--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Agency[ id=3 ]
-[EL Finest]: 2012-05-12 16:59:05.741--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrant[ id=1000 ]
-[EL Finest]: 2012-05-12 16:59:05.741--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Billrownumber[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.741--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.741--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Warrownumber[ id=1005 ]
-[EL Finest]: 2012-05-12 16:59:05.742--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Docrow[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.742--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the object trpo_kp.tables.Docrow[ id=6 ]
-[EL Finest]: 2012-05-12 16:59:05.742--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ValueReadQuery(sql="SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL")
-[EL Finest]: 2012-05-12 16:59:05.742--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Fine]: 2012-05-12 16:59:05.742--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT WARROWNUMBER_SEQ.NEXTVAL FROM DUAL
-[EL Finest]: 2012-05-12 16:59:05.743--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finest]: 2012-05-12 16:59:05.743--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--assign sequence to the object (1 011 -> trpo_kp.tables.Warrownumber[ id=null ])
-[EL Finer]: 2012-05-12 16:59:05.744--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--begin unit of work commit
-[EL Finest]: 2012-05-12 16:59:05.749--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Employee )
-[EL Finest]: 2012-05-12 16:59:05.749--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Paymentorder )
-[EL Finest]: 2012-05-12 16:59:05.75--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:05.75--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:05.75--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:05.75--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:05.75--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:05.751--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query DoesExistQuery(referenceClass=Docrow )
-[EL Finest]: 2012-05-12 16:59:05.752--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query InsertObjectQuery(trpo_kp.tables.Warrant[ id=1001 ])
-[EL Finest]: 2012-05-12 16:59:05.752--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
-[EL Finer]: 2012-05-12 16:59:05.753--ClientSession(13018016)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--begin transaction
-[EL Fine]: 2012-05-12 16:59:05.753--ClientSession(13018016)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO WARRANT (ID, ISSUE_DATE, VALID_UNTIL, EMPL_ID, ORDER_ID) VALUES (?, ?, ?, ?, ?)
-	bind => [1001, 2012-05-12, null, 1, 1]
-[EL Fine]: 2012-05-12 16:59:05.772--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT 1 FROM DUAL
-[EL Warning]: 2012-05-12 16:59:05.774--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--Local Exception Stack: 
-Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.2.0.v20110202-r8913): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: ORA-00001: unique constraint (SYSTEM.WARRANT_UK1) violated
-
-Error Code: 1
-Call: INSERT INTO WARRANT (ID, ISSUE_DATE, VALID_UNTIL, EMPL_ID, ORDER_ID) VALUES (?, ?, ?, ?, ?)
-	bind => [1001, 2012-05-12, null, 1, 1]
-Query: InsertObjectQuery(trpo_kp.tables.Warrant[ id=1001 ])
-	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:324)
-	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:798)
-	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeNoSelect(DatabaseAccessor.java:864)
-	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:583)
-	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:526)
-	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:1729)
-	at org.eclipse.persistence.sessions.server.ClientSession.executeCall(ClientSession.java:234)
-	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:207)
-	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:193)
-	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.insertObject(DatasourceCallQueryMechanism.java:342)
-	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:162)
-	at org.eclipse.persistence.internal.queries.StatementQueryMechanism.insertObject(StatementQueryMechanism.java:177)
-	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.insertObjectForWrite(DatabaseQueryMechanism.java:469)
-	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommit(InsertObjectQuery.java:80)
-	at org.eclipse.persistence.queries.InsertObjectQuery.executeCommitWithChangeSet(InsertObjectQuery.java:90)
-	at org.eclipse.persistence.internal.queries.DatabaseQueryMechanism.executeWriteWithChangeSet(DatabaseQueryMechanism.java:291)
-	at org.eclipse.persistence.queries.WriteObjectQuery.executeDatabaseQuery(WriteObjectQuery.java:58)
-	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:808)
-	at org.eclipse.persistence.queries.DatabaseQuery.executeInUnitOfWork(DatabaseQuery.java:711)
-	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWorkObjectLevelModifyQuery(ObjectLevelModifyQuery.java:108)
-	at org.eclipse.persistence.queries.ObjectLevelModifyQuery.executeInUnitOfWork(ObjectLevelModifyQuery.java:85)
-	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2842)
-	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1521)
-	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1503)
-	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1463)
-	at org.eclipse.persistence.internal.sessions.CommitManager.commitNewObjectsForClassWithChangeSet(CommitManager.java:224)
-	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsForClassWithChangeSet(CommitManager.java:191)
-	at org.eclipse.persistence.internal.sessions.CommitManager.commitAllObjectsWithChangeSet(CommitManager.java:136)
-	at org.eclipse.persistence.internal.sessions.AbstractSession.writeAllObjectsWithChangeSet(AbstractSession.java:3766)
-	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabase(UnitOfWorkImpl.java:1404)
-	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.commitToDatabase(RepeatableWriteUnitOfWork.java:616)
-	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitToDatabaseWithChangeSet(UnitOfWorkImpl.java:1511)
-	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.commitRootUnitOfWork(RepeatableWriteUnitOfWork.java:264)
-	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.commitAndResume(UnitOfWorkImpl.java:1130)
-	at org.eclipse.persistence.internal.jpa.transaction.EntityTransactionImpl.commitInternal(EntityTransactionImpl.java:84)
-	at org.eclipse.persistence.internal.jpa.transaction.EntityTransactionImpl.commit(EntityTransactionImpl.java:63)
-	at trpo_kp.panels.Result.jButton1ActionPerformed(Result.java:462)
-	at trpo_kp.panels.Result.access$000(Result.java:29)
-	at trpo_kp.panels.Result$2.actionPerformed(Result.java:279)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
-	at java.awt.Component.processMouseEvent(Component.java:6263)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
-	at java.awt.Component.processEvent(Component.java:6028)
-	at java.awt.Container.processEvent(Container.java:2041)
-	at java.awt.Component.dispatchEventImpl(Component.java:4630)
-	at java.awt.Container.dispatchEventImpl(Container.java:2099)
-	at java.awt.Component.dispatchEvent(Component.java:4460)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4574)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
-	at java.awt.Container.dispatchEventImpl(Container.java:2085)
-	at java.awt.Window.dispatchEventImpl(Window.java:2478)
-	at java.awt.Component.dispatchEvent(Component.java:4460)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:599)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:178)
-	at java.awt.Dialog$1.run(Dialog.java:1046)
-	at java.awt.Dialog$3.run(Dialog.java:1098)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.Dialog.show(Dialog.java:1096)
-	at java.awt.Component.show(Component.java:1563)
-	at java.awt.Component.setVisible(Component.java:1515)
-	at java.awt.Window.setVisible(Window.java:842)
-	at java.awt.Dialog.setVisible(Dialog.java:986)
-	at trpo_kp.panels.WarrantRegister.confirmActionPerformed(WarrantRegister.java:320)
-	at trpo_kp.panels.WarrantRegister.access$300(WarrantRegister.java:32)
-	at trpo_kp.panels.WarrantRegister$5.actionPerformed(WarrantRegister.java:197)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1995)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2318)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:387)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:242)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:236)
-	at java.awt.Component.processMouseEvent(Component.java:6263)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
-	at java.awt.Component.processEvent(Component.java:6028)
-	at java.awt.Container.processEvent(Container.java:2041)
-	at java.awt.Component.dispatchEventImpl(Component.java:4630)
-	at java.awt.Container.dispatchEventImpl(Container.java:2099)
-	at java.awt.Component.dispatchEvent(Component.java:4460)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4574)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4238)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
-	at java.awt.Container.dispatchEventImpl(Container.java:2085)
-	at java.awt.Window.dispatchEventImpl(Window.java:2478)
-	at java.awt.Component.dispatchEvent(Component.java:4460)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:599)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:178)
-	at java.awt.Dialog$1.run(Dialog.java:1046)
-	at java.awt.Dialog$3.run(Dialog.java:1098)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.Dialog.show(Dialog.java:1096)
-	at java.awt.Component.show(Component.java:1563)
-	at java.awt.Component.setVisible(Component.java:1515)
-	at java.awt.Window.setVisible(Window.java:842)
-	at java.awt.Dialog.setVisible(Dialog.java:986)
-	at trpo_kp.TRPO_KPView.warRegMenuSelected(TRPO_KPView.java:253)
-	at trpo_kp.TRPO_KPView.access$900(TRPO_KPView.java:24)
-	at trpo_kp.TRPO_KPView$4.menuSelected(TRPO_KPView.java:173)
-	at javax.swing.JMenu.fireMenuSelected(JMenu.java:1028)
-	at javax.swing.JMenu$MenuChangeListener.stateChanged(JMenu.java:1107)
-	at javax.swing.DefaultButtonModel.fireStateChanged(DefaultButtonModel.java:333)
-	at javax.swing.DefaultButtonModel.setSelected(DefaultButtonModel.java:215)
-	at javax.swing.JMenu.setSelected(JMenu.java:294)
-	at javax.swing.JMenu.menuSelectionChanged(JMenu.java:1175)
-	at javax.swing.MenuSelectionManager.setSelectedPath(MenuSelectionManager.java:100)
-	at javax.swing.plaf.basic.BasicMenuUI$Handler.mousePressed(BasicMenuUI.java:430)
-	at javax.swing.plaf.basic.BasicMenuUI$MouseInputHandler.mousePressed(BasicMenuUI.java:322)
-	at java.awt.Component.processMouseEvent(Component.java:6260)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3267)
-	at java.awt.Component.processEvent(Component.java:6028)
-	at java.awt.Container.processEvent(Container.java:2041)
-	at java.awt.Component.dispatchEventImpl(Component.java:4630)
-	at java.awt.Container.dispatchEventImpl(Container.java:2099)
-	at java.awt.Component.dispatchEvent(Component.java:4460)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4574)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4235)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4168)
-	at java.awt.Container.dispatchEventImpl(Container.java:2085)
-	at java.awt.Window.dispatchEventImpl(Window.java:2478)
-	at java.awt.Component.dispatchEvent(Component.java:4460)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:599)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
-Caused by: java.sql.SQLException: ORA-00001: unique constraint (SYSTEM.WARRANT_UK1) violated
-
-	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:305)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:272)
-	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:623)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:181)
-	at oracle.jdbc.driver.T4CPreparedStatement.execute_for_rows(T4CPreparedStatement.java:543)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1028)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2888)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:2960)
-	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeDirectNoSelect(DatabaseAccessor.java:789)
-	... 132 more
-
-[EL Finer]: 2012-05-12 16:59:05.783--ClientSession(13018016)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--rollback transaction
-[EL Finest]: 2012-05-12 16:59:05.784--ServerSession(23414511)--Connection(3113238)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
-[EL Finer]: 2012-05-12 16:59:05.784--UnitOfWork(18909403)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
-[EL Finer]: 2012-05-12 16:59:05.784--ClientSession(13018016)--Thread(Thread[AWT-EventQueue-0,6,main])--client released
+[EL Finest]: 2012-05-12 18:16:30.712--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finest]: 2012-05-12 18:16:30.713--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
+[EL Finest]: 2012-05-12 18:16:30.713--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
+[EL Finest]: 2012-05-12 18:16:30.713--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
+[EL Finest]: 2012-05-12 18:16:30.713--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadObjectQuery(name="depId" referenceClass=Department )
+[EL Finest]: 2012-05-12 18:16:30.713--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=1 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=2 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=3 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Employee[ id=4 ]
+[EL Finest]: 2012-05-12 18:16:30.714--UnitOfWork(5585368)--Thread(Thread[AWT-EventQueue-0,6,main])--Register the existing object trpo_kp.tables.Department[ id=1 ]
+[EL Finer]: 2012-05-12 18:16:30.716--ServerSession(7461949)--Thread(Thread[AWT-EventQueue-0,6,main])--client acquired: 22758546
+[EL Finer]: 2012-05-12 18:16:30.716--ClientSession(22758546)--Thread(Thread[AWT-EventQueue-0,6,main])--acquire unit of work: 15921360
+[EL Finest]: 2012-05-12 18:16:30.716--UnitOfWork(15921360)--Thread(Thread[AWT-EventQueue-0,6,main])--Execute query ReadAllQuery(name="Paymentorder.findFreeByOrgId" referenceClass=Paymentorder sql="SELECT t0.ID, t0.AMOUNT, t0.PODATE, t0.BILL_ID, t0.ORG_ID FROM PAYMENTORDER t0 WHERE t0.ID NOT IN (SELECT t1.ID FROM WARRANT t2, PAYMENTORDER t1 WHERE (t1.ID = t2.ORDER_ID))")
+[EL Finest]: 2012-05-12 18:16:30.716--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection acquired from connection pool [default].
+[EL Fine]: 2012-05-12 18:16:30.716--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t0.ID, t0.AMOUNT, t0.PODATE, t0.BILL_ID, t0.ORG_ID FROM PAYMENTORDER t0 WHERE t0.ID NOT IN (SELECT t1.ID FROM WARRANT t2, PAYMENTORDER t1 WHERE (t1.ID = t2.ORDER_ID))
+[EL Finest]: 2012-05-12 18:16:30.719--ServerSession(7461949)--Connection(8814537)--Thread(Thread[AWT-EventQueue-0,6,main])--Connection released to connection pool [default].
+[EL Finer]: 2012-05-12 18:16:30.719--UnitOfWork(15921360)--Thread(Thread[AWT-EventQueue-0,6,main])--release unit of work
+[EL Finer]: 2012-05-12 18:16:30.719--ClientSession(22758546)--Thread(Thread[AWT-EventQueue-0,6,main])--client released

@@ -75,14 +75,16 @@ public class OrganisationControl {
         em.close();
         return paymentorderList;
     }
-    /*public static List<Paymentorder> getFreePaymentOrders(){
+    public static List<Paymentorder> getFreePaymentOrders(){
         EntityManager em = emf.createEntityManager();
-        org = em.merge(org);
-        em.refresh(org);
-        List<Paymentorder> paymentorderList = org.getPaymentorderList();
+        //org = em.merge(org);
+        //em.refresh(org);
+        TypedQuery<Paymentorder> findpo = em.createNamedQuery("Paymentorder.findFreeByOrgId", Paymentorder.class);
+        //findpo.setParameter("orgid", org.getId());
+        List<Paymentorder> paymentorderList = findpo.getResultList();
         em.close();
         return paymentorderList;
-    }*/
+    }
     public static Department findDepartment(String DepName){
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);

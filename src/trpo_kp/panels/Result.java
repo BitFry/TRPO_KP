@@ -79,7 +79,7 @@ public class Result extends javax.swing.JPanel {
                 info.getEmployee().getIssueDate().getMonth() + "/" +
                 (info.getEmployee().getIssueDate().getYear()+1900)+
                 ", кем выдан:" + info.getEmployee().getIssuedBy());
-        sup.setText(info.getPaymentorder().getSupId().getName());
+        sup.setText(info.getPaymentorder().getBillId().getSupId().getName());
         chief.setText(info.getOrg().getDirector());
         accauntant.setText(info.getOrg().getChiefAccountant());
     }
