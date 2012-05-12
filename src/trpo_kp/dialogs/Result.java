@@ -22,7 +22,7 @@ public class Result extends javax.swing.JDialog {
     public Result(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        result1.setRoot(this);
+        //result1.setRoot(this);
     }
 
     /** This method is called from within the constructor to
@@ -34,7 +34,7 @@ public class Result extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        result1 = new trpo_kp.panels.Result();
+        result1 = new trpo_kp.panels.Result(this);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setName("Form"); // NOI18N

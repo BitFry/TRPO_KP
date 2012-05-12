@@ -40,7 +40,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Paymentorder.findAll", query = "SELECT p FROM Paymentorder p"),
     @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id"),
     @NamedQuery(name = "Paymentorder.findByPodate", query = "SELECT p FROM Paymentorder p WHERE p.podate = :podate"),
-    @NamedQuery(name = "Paymentorder.findByAmount", query = "SELECT p FROM Paymentorder p WHERE p.amount = :amount")})
+    @NamedQuery(name = "Paymentorder.findByAmount", query = "SELECT p FROM Paymentorder p WHERE p.amount = :amount"),
+    @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id")})
 @SequenceGenerator(name="PaymentorderSeq", sequenceName="PAYMENTORDER_SEQ", initialValue=1000, allocationSize=1)
 public class Paymentorder implements Serializable {
     private static final long serialVersionUID = 1L;

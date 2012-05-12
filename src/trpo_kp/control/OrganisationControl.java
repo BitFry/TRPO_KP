@@ -75,6 +75,14 @@ public class OrganisationControl {
         em.close();
         return paymentorderList;
     }
+    /*public static List<Paymentorder> getFreePaymentOrders(){
+        EntityManager em = emf.createEntityManager();
+        org = em.merge(org);
+        em.refresh(org);
+        List<Paymentorder> paymentorderList = org.getPaymentorderList();
+        em.close();
+        return paymentorderList;
+    }*/
     public static Department findDepartment(String DepName){
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);

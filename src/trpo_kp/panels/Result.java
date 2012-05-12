@@ -32,6 +32,10 @@ public class Result extends javax.swing.JPanel {
     public Result() {
         initComponents();
     }
+    public Result(javax.swing.JDialog root){
+        initComponents();
+        this.root = root;
+    }
     
     public void updateInformation(){
         if(info == null){
@@ -515,24 +519,6 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         this.info = info;
     }
     private JDialog root;
-
-    /**
-     * Get the value of root
-     *
-     * @return the value of root
-     */
-    public JDialog getRoot() {
-        return root;
-    }
-
-    /**
-     * Set the value of root
-     *
-     * @param root new value of root
-     */
-    public void setRoot(JDialog root) {
-        this.root = root;
-    }
     private Date currDate;
 
     /**
