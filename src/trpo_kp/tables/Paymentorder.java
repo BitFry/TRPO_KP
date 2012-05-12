@@ -44,6 +44,10 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id")})
 @SequenceGenerator(name="PaymentorderSeq", sequenceName="PAYMENTORDER_SEQ", initialValue=1000, allocationSize=1)
 public class Paymentorder implements Serializable {
+    @Basic(optional = false)
+    @Column(name = "PODATE")
+    @Temporal(TemporalType.DATE)
+    private Date podate;
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -51,10 +55,6 @@ public class Paymentorder implements Serializable {
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PaymentorderSeq")
     @Column(name = "ID")
     private BigDecimal id;
-    @Basic(optional = false)
-    @Column(name = "PODATE")
-    @Temporal(TemporalType.DATE)
-    private Date podate;
     @Basic(optional = false)
     @Column(name = "AMOUNT")
     private double amount;
@@ -91,14 +91,6 @@ public class Paymentorder implements Serializable {
 
     public void setId(BigDecimal id) {
         this.id = id;
-    }
-
-    public Date getPodate() {
-        return podate;
-    }
-
-    public void setPodate(Date podate) {
-        this.podate = podate;
     }
 
     public double getAmount() {
@@ -173,6 +165,14 @@ public class Paymentorder implements Serializable {
     @Override
     public String toString() {
         return "trpo_kp.tables.Paymentorder[ id=" + id + " ]";
+    }
+
+    public Date getPodate() {
+        return podate;
+    }
+
+    public void setPodate(Date podate) {
+        this.podate = podate;
     }
     
 }

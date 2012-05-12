@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Bill.findByIssueDate", query = "SELECT b FROM Bill b WHERE b.issueDate = :issueDate")})
 @SequenceGenerator(name="BillSeq", sequenceName="BILL_SEQ", initialValue=1000, allocationSize=1)
 public class Bill implements Serializable {
-    @Basic(optional = false)
+    @Basic(optional =     false)
     @Column(name = "ISSUE_DATE")
     @Temporal(TemporalType.DATE)
     private Date issueDate;
@@ -149,5 +149,4 @@ public class Bill implements Serializable {
     public String toString() {
         return "trpo_kp.tables.Bill[ id=" + id + " ]";
     }
-    
 }
