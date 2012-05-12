@@ -11,10 +11,14 @@ import org.jdesktop.application.FrameView;
 import org.jdesktop.application.TaskMonitor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ActionMap;
 import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import trpo_kp.dialogs.WarrantRegister;
 import trpo_kp.dialogs.WarrantSumInclTaxes;
 
@@ -111,7 +115,11 @@ public class TRPO_KPView extends FrameView {
         javax.swing.JMenuItem aboutMenuItem = new javax.swing.JMenuItem();
         warReg = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         statusPanel = new javax.swing.JPanel();
         javax.swing.JSeparator statusPanelSeparator = new javax.swing.JSeparator();
         statusMessageLabel = new javax.swing.JLabel();
@@ -182,10 +190,28 @@ public class TRPO_KPView extends FrameView {
 
         jMenu4.setText(resourceMap.getString("jMenu4.text")); // NOI18N
         jMenu4.setName("jMenu4"); // NOI18N
+
+        jMenuItem2.setText(resourceMap.getString("jMenuItem2.text")); // NOI18N
+        jMenuItem2.setName("jMenuItem2"); // NOI18N
+        jMenu4.add(jMenuItem2);
+
+        jMenuItem3.setText(resourceMap.getString("jMenuItem3.text")); // NOI18N
+        jMenuItem3.setName("jMenuItem3"); // NOI18N
+        jMenu4.add(jMenuItem3);
+
         menuBar.add(jMenu4);
 
         jMenu5.setText(resourceMap.getString("jMenu5.text")); // NOI18N
         jMenu5.setName("jMenu5"); // NOI18N
+
+        jMenuItem4.setText(resourceMap.getString("jMenuItem4.text")); // NOI18N
+        jMenuItem4.setName("jMenuItem4"); // NOI18N
+        jMenu5.add(jMenuItem4);
+
+        jMenuItem5.setText(resourceMap.getString("jMenuItem5.text")); // NOI18N
+        jMenuItem5.setName("jMenuItem5"); // NOI18N
+        jMenu5.add(jMenuItem5);
+
         menuBar.add(jMenu5);
 
         statusPanel.setName("statusPanel"); // NOI18N
@@ -265,6 +291,10 @@ private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JMenuBar menuBar;
@@ -282,4 +312,62 @@ private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:
     private int busyIconIndex = 0;
 
     private JDialog aboutBox;
+    private JMenuBar chiefAccountant = createChiefAccountantMenuBar();;
+    private JMenuBar Accountant = createAccountantMenuBar();
+    
+    private JMenuBar createChiefAccountantMenuBar(){
+        JMenu fileMenu1 = new JMenu("Файл");
+        JMenuItem exitMenuItem1 = new JMenuItem();
+        
+        ActionMap actionMap = org.jdesktop.application.Application.getInstance(trpo_kp.TRPO_KPApp.class).getContext().getActionMap(TRPO_KPView.class, this);
+        exitMenuItem1.setAction(actionMap.get("quit")); // NOI18N
+        exitMenuItem1.setName("exitMenuItem"); // NOI18N
+        fileMenu1.add(exitMenuItem1);
+        
+        JMenu jMenu = new JMenu("Регистрация доверенности");
+        JMenu jMenu1 = new JMenu("Поиск");
+        JMenuItem jMenuItem = new JMenuItem("Подразделение с максимальной суммой доверенностей");
+        JMenuItem jMenuItem2 = new JMenuItem("Подразделение с максимальной суммой счетов, оплаченных полностью");
+        jMenu1.add(jMenuItem2);
+        jMenu1.add(jMenuItem);
+        JMenu jMenu2 = new JMenu("Вычисление");
+        JMenuItem jMenuItem1 = new JMenuItem("Сумма НДС для ставки и продавца");
+        JMenuItem jMenuItem3 = new JMenuItem("Сумма НДС для ставки с детализацией продавцов");
+        jMenu2.add(jMenuItem1);
+        jMenu2.add(jMenuItem3);
+        JMenuBar jMenuBar = new JMenuBar();
+        jMenuBar.add(fileMenu1);
+        jMenuBar.add(jMenu);
+        jMenuBar.add(jMenu1);
+        jMenuBar.add(jMenu2);
+        return jMenuBar;
+    }
+    
+    private JMenuBar createAccountantMenuBar() {
+        JMenu fileMenu1 = new JMenu("Файл");
+        JMenuItem exitMenuItem1 = new JMenuItem();
+
+        ActionMap actionMap = org.jdesktop.application.Application.getInstance(trpo_kp.TRPO_KPApp.class).getContext().getActionMap(TRPO_KPView.class, this);
+        exitMenuItem1.setAction(actionMap.get("quit")); // NOI18N
+        exitMenuItem1.setName("exitMenuItem"); // NOI18N
+        fileMenu1.add(exitMenuItem1);
+
+        JMenu jMenu = new JMenu("Регистрация счёта");
+        JMenu jMenu3 = new JMenu("Регистрация п/п");
+        JMenu jMenu2 = new JMenu("Вычисление");
+        JMenuItem jMenuItem1 = new JMenuItem("Сумма счетов с учётом налогов для продавца");
+        JMenuItem jMenuItem3 = new JMenuItem("Общая сумма счетов с учётом налогов с детализацией по продавцам");
+        JMenuItem jMenuItem4 = new JMenuItem("Сумма доверенностей с учётом налогов для подразделения");
+        JMenuItem jMenuItem5 = new JMenuItem("Общая сумма доверенностей с учётом налогов с детализацией по подразделениям");
+        jMenu2.add(jMenuItem1);
+        jMenu2.add(jMenuItem3);
+        jMenu2.add(jMenuItem4);
+        jMenu2.add(jMenuItem5);
+        JMenuBar jMenuBar = new JMenuBar();
+        jMenuBar.add(fileMenu1);
+        jMenuBar.add(jMenu);
+        jMenuBar.add(jMenu3);
+        jMenuBar.add(jMenu2);
+        return jMenuBar;
+    }
 }
