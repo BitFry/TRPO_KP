@@ -29,8 +29,10 @@ public class WarrantSumInclTaxes extends javax.swing.JPanel {
 
     private void initDepList(){
         List<Department> departments = OrganisationControl.getDepartments();
-        for (Department department : departments) {
-            depList.addItem(department.getName());
+        if (departments != null) {
+            for (Department department : departments) {
+                depList.addItem(department.getName());
+            }
         }
     }
     /** This method is called from within the constructor to
@@ -201,26 +203,22 @@ public class WarrantSumInclTaxes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
 private void calculateTaxesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateTaxesActionPerformed
-    //OrganisationControl.test();
     Date datefrom = dateFrom.getDate();
     Date dateuntil = dateUntil.getDate();
-    if(datefrom == null || dateuntil == null){
+    if (datefrom == null || dateuntil == null) {
         return;
     }
-    /*System.out.println(datefrom);
-    System.out.println(datefrom.getYear());
-    System.out.println(datefrom.getMonth());
-    System.out.println(datefrom.getDay());
-    System.out.println(dateuntil);
-    System.out.println(dateuntil.getYear());
-    System.out.println(dateuntil.getMonth());
-    System.out.println(dateuntil.getDay());
-    Date tmp = new Date(dateFrom.getDate().getYear(), dateFrom.getDate().getMonth(), dateFrom.getDate().getDate());
-    System.out.println(tmp);*/
+    Department findDepartment = OrganisationControl.findDepartment((String) depList.getSelectedItem());
+    if (findDepartment == null) {
+        result.setText("" + 0.0);
+        return;
+    }
     datefrom = new Date(datefrom.getYear(), datefrom.getMonth(), datefrom.getDate());
     dateuntil = new Date(dateuntil.getYear(), dateuntil.getMonth(), dateuntil.getDate());
-    Department findDepartment = OrganisationControl.findDepartment((String) depList.getSelectedItem());
-    double warrantsSumIncludingTaxes = OrganisationControl.getWarrantsSumIncludingTaxes(datefrom, dateuntil, findDepartment);
+    double warrantsSumIncludingTaxes = OrganisationControl.getWarrantsSumIncludingTaxes(
+            datefrom,
+            dateuntil,
+            findDepartment);
     result.setText("" + warrantsSumIncludingTaxes);
 }//GEN-LAST:event_calculateTaxesActionPerformed
 

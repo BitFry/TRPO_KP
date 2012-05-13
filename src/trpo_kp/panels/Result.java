@@ -10,6 +10,7 @@
  */
 package trpo_kp.panels;
 
+import java.awt.Container;
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
@@ -475,6 +476,8 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     entityManager.getTransaction().commit();
     entityManager.close();
     root.dispose();
+    JDialog parent = (JDialog)root.getParent();
+    parent.dispose();
 }//GEN-LAST:event_jButton1ActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField INN;

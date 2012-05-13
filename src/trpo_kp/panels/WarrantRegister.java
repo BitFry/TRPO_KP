@@ -320,7 +320,7 @@ private void paymentOrderListActionPerformed(java.awt.event.ActionEvent evt) {//
 }//GEN-LAST:event_paymentOrderListActionPerformed
 
 private void confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmActionPerformed
-    trpo_kp.dialogs.Result res = new trpo_kp.dialogs.Result(null, true);
+    trpo_kp.dialogs.Result res = new trpo_kp.dialogs.Result(root, null, true);
     resultInfo info = new resultInfo(organisation, 
             paymentorder, 
             employee, 

@@ -350,6 +350,12 @@ this.getFrame().getJMenuBar().revalidate();
         JMenuItem jMenuItem1 = new JMenuItem("Сумма счетов с учётом налогов для продавца");
         JMenuItem jMenuItem3 = new JMenuItem("Общая сумма счетов с учётом налогов с детализацией по продавцам");
         JMenuItem jMenuItem4 = new JMenuItem("Сумма доверенностей с учётом налогов для подразделения");
+        jMenuItem4.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                WarrantSumInclTaxesSelected(e);
+            }
+        });
         JMenuItem jMenuItem5 = new JMenuItem("Общая сумма доверенностей с учётом налогов с детализацией по подразделениям");
         jMenu2.add(jMenuItem1);
         jMenu2.add(jMenuItem3);
@@ -377,6 +383,10 @@ this.getFrame().getJMenuBar().revalidate();
 
     private void warRegMenuSelected(javax.swing.event.MenuEvent evt) {
         trpo_kp.dialogs.WarrantRegister dialog = new WarrantRegister(null, true);
+        dialog.setVisible(true);
+    }
+    private void WarrantSumInclTaxesSelected(ActionEvent e) {
+        trpo_kp.dialogs.WarrantSumInclTaxes dialog = new WarrantSumInclTaxes(null, true);
         dialog.setVisible(true);
     }
 }
