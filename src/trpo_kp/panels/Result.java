@@ -32,13 +32,20 @@ public class Result extends javax.swing.JPanel {
     public Result() {
         initComponents();
     }
-    public Result(javax.swing.JDialog root){
+
+    public Result(javax.swing.JDialog root) {
         initComponents();
         this.root = root;
     }
     
-    public void updateInformation(){
-        if(info == null){
+    public void updateInformation() {
+        if (info == null) {
+            return;
+        }
+        if (info.getOrg() == null
+                || info.getEmployee() == null
+                || info.getPaymentorder() == null
+                || info.getRowData() == null) {
             return;
         }
         orgDesc.setText(info.getOrg().getName());
@@ -46,39 +53,39 @@ public class Result extends javax.swing.JPanel {
         KPP.setText(info.getOrg().getKpp());
         adress.setText(info.getOrg().getAdress());
         this.setCurrDate(java.util.Calendar.getInstance().getTime());
-        issueDate.setText(currDate.getDate() + "/" + 
-                currDate.getMonth() + "/" +
-                (currDate.getYear()+1900));
-        Date dvalidUntil = (Date)currDate.clone();
+        issueDate.setText(currDate.getDate() + "/"
+                + currDate.getMonth() + "/"
+                + (currDate.getYear() + 1900));
+        Date dvalidUntil = (Date) currDate.clone();
         dvalidUntil.setDate(dvalidUntil.getDate() + 10);
         
-        validUntil.setText(dvalidUntil.getDate() + "/" + 
-                dvalidUntil.getMonth() + "/" +
-                (dvalidUntil.getYear()+1900));
+        validUntil.setText(dvalidUntil.getDate() + "/"
+                + dvalidUntil.getMonth() + "/"
+                + (dvalidUntil.getYear() + 1900));
         
-        po.setText("№: " + info.getPaymentorder().getId() + 
-                ", Дата:" + info.getPaymentorder().getPodate().getDate() + "/" + 
-                info.getPaymentorder().getPodate().getMonth() + "/" +
-                (info.getPaymentorder().getPodate().getYear()+1900) + 
-                ", Сумма:" + info.getPaymentorder().getAmount());
-        DefaultTableModel dtm = (DefaultTableModel)products.getModel();
-        while(dtm.getRowCount() > 0){
+        po.setText("№: " + info.getPaymentorder().getId()
+                + ", Дата:" + info.getPaymentorder().getPodate().getDate() + "/"
+                + info.getPaymentorder().getPodate().getMonth() + "/"
+                + (info.getPaymentorder().getPodate().getYear() + 1900)
+                + ", Сумма:" + info.getPaymentorder().getAmount());
+        DefaultTableModel dtm = (DefaultTableModel) products.getModel();
+        while (dtm.getRowCount() > 0) {
             dtm.removeRow(0);
         }
         Vector rowData = info.getRowData();
         for (Object object : rowData) {
-            dtm.addRow((Vector)object);
+            dtm.addRow((Vector) object);
         }
-        empl.setText("Фамилия, и.о.: " + info.getEmployee().getName() + 
-                ", должность:" + info.getEmployee().getPost() + 
-                ", подразделение:" + info.getEmployee().getDepId().getName());
-        passport.setText("серия: " + info.getEmployee().getSeries() + 
-                ", номер:" + info.getEmployee().getPnumber() + 
-                ", дата выдачи:" + 
-                info.getEmployee().getIssueDate().getDate() + "/" + 
-                info.getEmployee().getIssueDate().getMonth() + "/" +
-                (info.getEmployee().getIssueDate().getYear()+1900)+
-                ", кем выдан:" + info.getEmployee().getIssuedBy());
+        empl.setText("Фамилия, и.о.: " + info.getEmployee().getName()
+                + ", должность:" + info.getEmployee().getPost()
+                + ", подразделение:" + info.getEmployee().getDepId().getName());
+        passport.setText("серия: " + info.getEmployee().getSeries()
+                + ", номер:" + info.getEmployee().getPnumber()
+                + ", дата выдачи:"
+                + info.getEmployee().getIssueDate().getDate() + "/"
+                + info.getEmployee().getIssueDate().getMonth() + "/"
+                + (info.getEmployee().getIssueDate().getYear() + 1900)
+                + ", кем выдан:" + info.getEmployee().getIssuedBy());
         sup.setText(info.getPaymentorder().getBillId().getSupId().getName());
         chief.setText(info.getOrg().getDirector());
         accauntant.setText(info.getOrg().getChiefAccountant());
@@ -436,8 +443,14 @@ public class Result extends javax.swing.JPanel {
 private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     root.dispose();
 }//GEN-LAST:event_jButton2ActionPerformed
-
+    
 private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    if (info.getOrg() == null
+            || info.getEmployee() == null
+            || info.getPaymentorder() == null
+            || info.getRowData() == null) {
+        return;
+    }
     Warrant warrant = new Warrant();
     warrant.setEmplId(info.getEmployee());
     warrant.setOrderId(info.getPaymentorder());
@@ -463,7 +476,6 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     entityManager.close();
     root.dispose();
 }//GEN-LAST:event_jButton1ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField INN;
     private javax.swing.JTextField KPP;
@@ -538,5 +550,4 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     public void setCurrDate(Date currDate) {
         this.currDate = currDate;
     }
-
 }

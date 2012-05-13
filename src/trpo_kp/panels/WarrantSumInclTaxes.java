@@ -201,7 +201,7 @@ public class WarrantSumInclTaxes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
 private void calculateTaxesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateTaxesActionPerformed
-    OrganisationControl.test();
+    //OrganisationControl.test();
     Date datefrom = dateFrom.getDate();
     Date dateuntil = dateUntil.getDate();
     if(datefrom == null || dateuntil == null){

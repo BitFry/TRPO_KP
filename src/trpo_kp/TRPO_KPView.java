@@ -4,6 +4,7 @@
 
 package trpo_kp;
 
+import javax.swing.event.MenuEvent;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.ResourceMap;
 import org.jdesktop.application.SingleFrameApplication;
@@ -11,6 +12,7 @@ import org.jdesktop.application.FrameView;
 import org.jdesktop.application.TaskMonitor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.Timer;
 import javax.swing.Icon;
@@ -19,6 +21,8 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
+import javax.swing.event.MenuListener;
 import trpo_kp.dialogs.WarrantRegister;
 import trpo_kp.dialogs.WarrantSumInclTaxes;
 
@@ -109,17 +113,11 @@ public class TRPO_KPView extends FrameView {
         mainPanel = new javax.swing.JPanel();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
         javax.swing.JMenu helpMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem aboutMenuItem = new javax.swing.JMenuItem();
-        warReg = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
         statusPanel = new javax.swing.JPanel();
         javax.swing.JSeparator statusPanelSeparator = new javax.swing.JSeparator();
         statusMessageLabel = new javax.swing.JLabel();
@@ -149,10 +147,6 @@ public class TRPO_KPView extends FrameView {
         fileMenu.setText(resourceMap.getString("fileMenu.text")); // NOI18N
         fileMenu.setName("fileMenu"); // NOI18N
 
-        jMenuItem1.setText(resourceMap.getString("jMenuItem1.text")); // NOI18N
-        jMenuItem1.setName("jMenuItem1"); // NOI18N
-        fileMenu.add(jMenuItem1);
-
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(trpo_kp.TRPO_KPApp.class).getContext().getActionMap(TRPO_KPView.class, this);
         exitMenuItem.setAction(actionMap.get("quit")); // NOI18N
         exitMenuItem.setName("exitMenuItem"); // NOI18N
@@ -169,50 +163,40 @@ public class TRPO_KPView extends FrameView {
 
         menuBar.add(helpMenu);
 
-        warReg.setText(resourceMap.getString("warReg.text")); // NOI18N
-        warReg.setName("warReg"); // NOI18N
-        warReg.addMenuListener(new javax.swing.event.MenuListener() {
+        jMenu3.setText(resourceMap.getString("jMenu3.text")); // NOI18N
+        jMenu3.setName("jMenu3"); // NOI18N
+        jMenu3.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
-                warRegMenuDeselected(evt);
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                warRegMenuSelected(evt);
+                jMenu3MenuSelected(evt);
             }
         });
-        warReg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warRegActionPerformed(evt);
-            }
-        });
-        menuBar.add(warReg);
+        menuBar.add(jMenu3);
 
         jMenu4.setText(resourceMap.getString("jMenu4.text")); // NOI18N
         jMenu4.setName("jMenu4"); // NOI18N
-
-        jMenuItem2.setText(resourceMap.getString("jMenuItem2.text")); // NOI18N
-        jMenuItem2.setName("jMenuItem2"); // NOI18N
-        jMenu4.add(jMenuItem2);
-
-        jMenuItem3.setText(resourceMap.getString("jMenuItem3.text")); // NOI18N
-        jMenuItem3.setName("jMenuItem3"); // NOI18N
-        jMenu4.add(jMenuItem3);
-
+        jMenu4.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                jMenu4MenuSelected(evt);
+            }
+        });
+        jMenu4.addMenuKeyListener(new javax.swing.event.MenuKeyListener() {
+            public void menuKeyPressed(javax.swing.event.MenuKeyEvent evt) {
+                jMenu4MenuKeyPressed(evt);
+            }
+            public void menuKeyReleased(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
+            }
+        });
         menuBar.add(jMenu4);
-
-        jMenu5.setText(resourceMap.getString("jMenu5.text")); // NOI18N
-        jMenu5.setName("jMenu5"); // NOI18N
-
-        jMenuItem4.setText(resourceMap.getString("jMenuItem4.text")); // NOI18N
-        jMenuItem4.setName("jMenuItem4"); // NOI18N
-        jMenu5.add(jMenuItem4);
-
-        jMenuItem5.setText(resourceMap.getString("jMenuItem5.text")); // NOI18N
-        jMenuItem5.setName("jMenuItem5"); // NOI18N
-        jMenu5.add(jMenuItem5);
-
-        menuBar.add(jMenu5);
 
         statusPanel.setName("statusPanel"); // NOI18N
 
@@ -268,33 +252,26 @@ public class TRPO_KPView extends FrameView {
         setStatusBar(statusPanel);
     }// </editor-fold>//GEN-END:initComponents
 
-private void warRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warRegActionPerformed
+private void jMenu3MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu3MenuSelected
+this.getFrame().setJMenuBar(Accountant);
+this.getFrame().getJMenuBar().revalidate();
+}//GEN-LAST:event_jMenu3MenuSelected
 
-}//GEN-LAST:event_warRegActionPerformed
+private void jMenu4MenuKeyPressed(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_jMenu4MenuKeyPressed
 
-private void warRegMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_warRegMenuSelected
-    /*trpo_kp.dialogs.WarrantSumInclTaxes dialog = new WarrantSumInclTaxes(null, true);
-    dialog.setVisible(true);*/
-    trpo_kp.dialogs.WarrantRegister dialog = new WarrantRegister(null, true);
-    dialog.setVisible(true);
-    javax.swing.JMenu m = (javax.swing.JMenu)evt.getSource();
-}//GEN-LAST:event_warRegMenuSelected
+}//GEN-LAST:event_jMenu4MenuKeyPressed
 
-private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_warRegMenuDeselected
-// TODO add your handling code here:
-}//GEN-LAST:event_warRegMenuDeselected
+private void jMenu4MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jMenu4MenuSelected
+this.getFrame().setJMenuBar(chiefAccountant);
+this.getFrame().getJMenuBar().revalidate();
+}//GEN-LAST:event_jMenu4MenuSelected
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JMenuBar menuBar;
@@ -302,7 +279,6 @@ private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:
     private javax.swing.JLabel statusAnimationLabel;
     private javax.swing.JLabel statusMessageLabel;
     private javax.swing.JPanel statusPanel;
-    private javax.swing.JMenu warReg;
     // End of variables declaration//GEN-END:variables
 
     private final Timer messageTimer;
@@ -318,13 +294,27 @@ private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:
     private JMenuBar createChiefAccountantMenuBar(){
         JMenu fileMenu1 = new JMenu("Файл");
         JMenuItem exitMenuItem1 = new JMenuItem();
+        JMenuItem jMenuItem4 = new JMenuItem(new ChangeRoleAction("Смена роли"));
         
         ActionMap actionMap = org.jdesktop.application.Application.getInstance(trpo_kp.TRPO_KPApp.class).getContext().getActionMap(TRPO_KPView.class, this);
         exitMenuItem1.setAction(actionMap.get("quit")); // NOI18N
         exitMenuItem1.setName("exitMenuItem"); // NOI18N
+        fileMenu1.add(jMenuItem4);
         fileMenu1.add(exitMenuItem1);
         
         JMenu jMenu = new JMenu("Регистрация доверенности");
+        jMenu.addMenuListener(new MenuListener() {
+
+            public void menuSelected(MenuEvent e) {
+                warRegMenuSelected(e);
+            }
+
+            public void menuDeselected(MenuEvent e) {
+            }
+
+            public void menuCanceled(MenuEvent e) {
+            }
+        });
         JMenu jMenu1 = new JMenu("Поиск");
         JMenuItem jMenuItem = new JMenuItem("Подразделение с максимальной суммой доверенностей");
         JMenuItem jMenuItem2 = new JMenuItem("Подразделение с максимальной суммой счетов, оплаченных полностью");
@@ -346,10 +336,12 @@ private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:
     private JMenuBar createAccountantMenuBar() {
         JMenu fileMenu1 = new JMenu("Файл");
         JMenuItem exitMenuItem1 = new JMenuItem();
+        JMenuItem jMenuItem6 = new JMenuItem(new ChangeRoleAction("Смена роли"));
 
         ActionMap actionMap = org.jdesktop.application.Application.getInstance(trpo_kp.TRPO_KPApp.class).getContext().getActionMap(TRPO_KPView.class, this);
         exitMenuItem1.setAction(actionMap.get("quit")); // NOI18N
         exitMenuItem1.setName("exitMenuItem"); // NOI18N
+        fileMenu1.add(jMenuItem6);
         fileMenu1.add(exitMenuItem1);
 
         JMenu jMenu = new JMenu("Регистрация счёта");
@@ -369,5 +361,22 @@ private void warRegMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:
         jMenuBar.add(jMenu3);
         jMenuBar.add(jMenu2);
         return jMenuBar;
+    }
+    
+    class ChangeRoleAction extends AbstractAction{
+
+        public ChangeRoleAction(String name) {
+            super(name);
+            putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke("control D"));
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            getFrame().setJMenuBar(menuBar);
+        }
+    }
+
+    private void warRegMenuSelected(javax.swing.event.MenuEvent evt) {
+        trpo_kp.dialogs.WarrantRegister dialog = new WarrantRegister(null, true);
+        dialog.setVisible(true);
     }
 }

@@ -38,11 +38,13 @@ public class OrganisationControl {
             getOrg();
         } catch (javax.persistence.PersistenceException e) {
             emf = null;
-            e.printStackTrace();
+            javax.swing.JOptionPane.showMessageDialog(null, e.getLocalizedMessage(), "Ошибка", javax.swing.JOptionPane.ERROR_MESSAGE);
+            //e.printStackTrace();
         }
     }
     
     private static void getOrg(){
+        if(emf == null){return;}
         EntityManager em = emf.createEntityManager();
         TypedQuery<Agency> query = em.createNamedQuery("Agency.findByName", Agency.class);
         query.setParameter("name", orgName);
@@ -50,6 +52,7 @@ public class OrganisationControl {
         em.close();
     }
     public static Agency getOrganisation(){
+        if(emf == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -57,9 +60,11 @@ public class OrganisationControl {
         return org;
     }
     public static EntityManager getEntityManager(){
+        if(emf == null){return null;}
         return emf.createEntityManager();
     }
     public static List<Department> getDepartments(){
+        if(emf == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -68,6 +73,7 @@ public class OrganisationControl {
         return departmentList;
     }
     public static List<Paymentorder> getPaymentOrders(){
+        if(emf == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -76,6 +82,7 @@ public class OrganisationControl {
         return paymentorderList;
     }
     public static List<Paymentorder> getFreePaymentOrders(){
+        if(emf == null){return null;}
         EntityManager em = emf.createEntityManager();
         //org = em.merge(org);
         //em.refresh(org);
@@ -86,6 +93,7 @@ public class OrganisationControl {
         return paymentorderList;
     }
     public static Department findDepartment(String DepName){
+        if(emf == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -94,6 +102,7 @@ public class OrganisationControl {
         return findDepartment;
     }
     public static Paymentorder findPaymentOrder(BigDecimal Id){
+        if(emf == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -102,6 +111,7 @@ public class OrganisationControl {
         return findPaymentOrder;
     }
     public static double getWarrantsSumIncludingTaxes(Date from, Date until, Department dep){
+        if(emf == null){return 0.0;}
         EntityManager em = emf.createEntityManager();
         dep = em.merge(dep);
         em.refresh(dep);
@@ -109,7 +119,9 @@ public class OrganisationControl {
         em.close();
         return warrantsSumIncludingTaxes;
     }
+    /*Не знаю нахера здесь этот метод но пока удалять не буду*/
     public static void test(){
+        if(emf == null){return;}
         EntityManager em = emf.createEntityManager();
         Department find = em.find(Department.class, new BigDecimal(1));
         em.close();

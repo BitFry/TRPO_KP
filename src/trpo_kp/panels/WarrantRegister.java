@@ -36,16 +36,27 @@ public class WarrantRegister extends javax.swing.JPanel {
         initComponents();
         initComboBoxes();
     }
+    
+    /** Creates new form documentAdd */
+    public WarrantRegister(JDialog root) {
+        this.root = root;
+        initComponents();
+        initComboBoxes();
+    }
 
     private void initComboBoxes(){
         organisation = OrganisationControl.getOrganisation();
         List<Department> departments = OrganisationControl.getDepartments();
-        for (Department department1 : departments) {
-            depList.addItem(department1.getName());
-        }
         List<Paymentorder> paymentOrders = OrganisationControl.getFreePaymentOrders();
-        for (Paymentorder paymentorder : paymentOrders) {
-            paymentOrderList.addItem(/*"№ " + */paymentorder.getId()/* + " сумма " + paymentorder.getAmount()*/);
+        if (departments != null) {
+            for (Department department1 : departments) {
+                depList.addItem(department1.getName());
+            }
+        }
+        if (paymentOrders != null) {
+            for (Paymentorder paymentorderl : paymentOrders) {
+                paymentOrderList.addItem(/*"№ " + */paymentorderl.getId()/* + " сумма " + paymentorder.getAmount()*/);
+            }
         }
         /*
          * @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="PaymentorderSeq")

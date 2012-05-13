@@ -22,7 +22,12 @@ public class Result extends javax.swing.JDialog {
     public Result(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        //result1.setRoot(this);
+    }
+    
+    /** Creates new form Result */
+    public Result(javax.swing.JDialog parent, String title, boolean modal) {
+        super(parent, "Результат", modal);
+        initComponents();
     }
 
     /** This method is called from within the constructor to
