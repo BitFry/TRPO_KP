@@ -23,6 +23,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 import javax.swing.event.MenuListener;
+import trpo_kp.dialogs.CreateBill;
+import trpo_kp.dialogs.CreatePP;
 import trpo_kp.dialogs.WarrantRegister;
 import trpo_kp.dialogs.WarrantSumInclTaxes;
 
@@ -345,7 +347,36 @@ this.getFrame().getJMenuBar().revalidate();
         fileMenu1.add(exitMenuItem1);
 
         JMenu jMenu = new JMenu("Регистрация счёта");
+	  jMenu.addMenuListener(new MenuListener() {
+
+		public void menuSelected(MenuEvent e) {
+		    createBill();
+		    //throw new UnsupportedOperationException("Not supported yet.");
+		}
+
+		public void menuDeselected(MenuEvent e) {
+		    //throw new UnsupportedOperationException("Not supported yet.");
+		}
+
+		public void menuCanceled(MenuEvent e) {
+		    //throw new UnsupportedOperationException("Not supported yet.");
+		}
+	  });
         JMenu jMenu3 = new JMenu("Регистрация п/п");
+	  jMenu3.addMenuListener(new MenuListener() {
+
+		public void menuSelected(MenuEvent e) {
+		    createPP();
+		}
+
+		public void menuDeselected(MenuEvent e) {
+		    //throw new UnsupportedOperationException("Not supported yet.");
+		}
+
+		public void menuCanceled(MenuEvent e) {
+		    //throw new UnsupportedOperationException("Not supported yet.");
+		}
+	  });
         JMenu jMenu2 = new JMenu("Вычисление");
         JMenuItem jMenuItem1 = new JMenuItem("Сумма счетов с учётом налогов для продавца");
         JMenuItem jMenuItem3 = new JMenuItem("Общая сумма счетов с учётом налогов с детализацией по продавцам");
@@ -387,6 +418,16 @@ this.getFrame().getJMenuBar().revalidate();
     }
     private void WarrantSumInclTaxesSelected(ActionEvent e) {
         trpo_kp.dialogs.WarrantSumInclTaxes dialog = new WarrantSumInclTaxes(null, true);
+        dialog.setVisible(true);
+    }
+    private void createBill() {
+        //trpo_kp.dialogs.WarrantSumInclTaxes dialog = new WarrantSumInclTaxes(null, true);
+	  trpo_kp.dialogs.CreateBill dialog = new CreateBill(null, true);
+        dialog.setVisible(true);
+    }
+    private void createPP() {
+        //trpo_kp.dialogs.WarrantSumInclTaxes dialog = new WarrantSumInclTaxes(null, true);
+	  trpo_kp.dialogs.CreatePP dialog = new CreatePP(null, true);
         dialog.setVisible(true);
     }
 }
