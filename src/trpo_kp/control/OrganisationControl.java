@@ -5,15 +5,12 @@
 package trpo_kp.control;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.FlushModeType;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import trpo_kp.tables.Agency;
 import trpo_kp.tables.Department;
@@ -29,30 +26,34 @@ public class OrganisationControl {
     private static String orgName = "Моя уютная контора";
     private static Agency org = null;
     private static EntityManagerFactory emf = null;
-    //private static EntityManager em = null;
 
     public static void initEntityManagerFactory() {
         try {
             emf = Persistence.createEntityManagerFactory("TRPO_KPPU");
-            //em = emf.createEntityManager();
-            getOrg();
+            org = getOrg();
         } catch (javax.persistence.PersistenceException e) {
             emf = null;
             javax.swing.JOptionPane.showMessageDialog(null, e.getLocalizedMessage(), "Ошибка", javax.swing.JOptionPane.ERROR_MESSAGE);
-            //e.printStackTrace();
         }
     }
     
-    private static void getOrg(){
-        if(emf == null){return;}
+    private static Agency getOrg(){
+        if(emf == null){return null;}
+        Agency agency;
         EntityManager em = emf.createEntityManager();
         TypedQuery<Agency> query = em.createNamedQuery("Agency.findByName", Agency.class);
         query.setParameter("name", orgName);
-        org = query.getSingleResult();
+        try {
+            agency = query.getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
         em.close();
+        return agency;
     }
     public static Agency getOrganisation(){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -60,11 +61,13 @@ public class OrganisationControl {
         return org;
     }
     public static EntityManager getEntityManager(){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         return emf.createEntityManager();
     }
     public static List<Department> getDepartments(){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -73,7 +76,8 @@ public class OrganisationControl {
         return departmentList;
     }
     public static List<Paymentorder> getPaymentOrders(){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -82,18 +86,18 @@ public class OrganisationControl {
         return paymentorderList;
     }
     public static List<Paymentorder> getFreePaymentOrders(){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         EntityManager em = emf.createEntityManager();
-        //org = em.merge(org);
-        //em.refresh(org);
         TypedQuery<Paymentorder> findpo = em.createNamedQuery("Paymentorder.findFreeByOrgId", Paymentorder.class);
-        //findpo.setParameter("orgid", org.getId());
+        findpo.setParameter("orgid", org);
         List<Paymentorder> paymentorderList = findpo.getResultList();
         em.close();
         return paymentorderList;
     }
     public static Department findDepartment(String DepName){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);
@@ -102,7 +106,8 @@ public class OrganisationControl {
         return findDepartment;
     }
     public static Paymentorder findPaymentOrder(BigDecimal Id){
-        if(emf == null){return null;}
+        if(emf == null ||
+                org == null){return null;}
         EntityManager em = emf.createEntityManager();
         org = em.merge(org);
         em.refresh(org);

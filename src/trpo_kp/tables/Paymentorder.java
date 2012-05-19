@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Paymentorder.findById", query = "SELECT p FROM Paymentorder p WHERE p.id = :id"),
     @NamedQuery(name = "Paymentorder.findFreeByOrgId", 
         query = "SELECT p FROM Paymentorder p WHERE "
-                    + "p.id not in (SELECT w.orderId.id from Warrant w)")})
+                    + "p.id not in (SELECT w.orderId.id from Warrant w) and p.orgId = :orgid")})
 @SequenceGenerator(name="PaymentorderSeq", sequenceName="PAYMENTORDER_SEQ", initialValue=1000, allocationSize=1)
 public class Paymentorder implements Serializable {
     @Basic(optional = false)
